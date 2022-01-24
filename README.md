@@ -65,4 +65,5 @@ O projeto **Estacionamento GranParking** conta com sistema de vagas mensais, hor
 
 ## Diagrama
 
-![ERD -](https://user-images.githubusercontent.com/98030629/150402373-7087eef8-3ccb-4ea1-9f5e-f1ca3642feaf.png)
+
+https://ik.imagekit.io/gzogywm8vya/rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr_86CvSZSHS.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643061219625
