@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class Estac {
 
-
+    // aplicação nao rodou como esperado
     private String nome;
     private String telefone;
     private Double faturamentoGeral;
