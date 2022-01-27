@@ -1,78 +1,56 @@
 package com.eder.control;
 
-import com.eder.Modulo.Estac;
+import com.eder.Modulos.Estac;
+import com.eder.Modulos.Veiculo;
+import com.eder.services.EstacionamentoServices;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/estacionamento")
+@RequestMapping
 public class ControlerEstacionamento {
+
+    @Autowired
+    private EstacionamentoServices estacionamentoServices;
 
     @PostMapping
     public ResponseEntity<Estac> criar(@RequestBody Estac estac) {
+        Estac estacCriado = estacionamentoServices.criar(estac);
 
-        System.out.println(estac);
+       return ResponseEntity.created(null).body(estacCriado);
 
-        return ResponseEntity.created(null).body(estac);
     }
+//
     @PatchMapping("/{id}")
-    public ResponseEntity<Estac> atualizar(@RequestBody Estac estac, @PathVariable long id) {
-        Estac.setId(2L);
+    public ResponseEntity<Estac> atualizar(@RequestBody Estac estac, @PathVariable Long id) {
 
-        return ResponseEntity.ok(estac);
+    Estac estacAtualizar = estacionamentoServices.atualizar(estac, 4L);
 
+        return ResponseEntity.ok(estacAtualizar);
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<String> deletar(@PathVariable long id) {
-        //  ("deletou como pedido" + id);
+   @DeleteMapping("/{id}")
+    public ResponseEntity<String> deletar(@PathVariable Long id) {
+
+        estacionamentoServices.deletar(id);
+
         return ResponseEntity.noContent().build();
     }
+    @GetMapping("/{id}")
+    public ResponseEntity<Estac> obter(@PathVariable Long id) {
+        Estac obterEstac = estacionamentoServices.obter(34L);
 
+        return ResponseEntity.ok(obterEstac);
+    }
     @GetMapping
-    public ResponseEntity<List> listar() {
-
-        Estac est1 = new Estac();
-        est1.setNome(String.valueOf(1L));
-        est1.getNome("Meriva");
-
-        Estac est2 = new Estac();
-        est2.setId(2L);
-        est2.setNome("Fox");
-
-
-        Estac est3 = new Estac();
-        est3.setId(2L);
-        est3.setNome("Cadillac");
-
-
-        Estac est4 = new Estac();
-        est4.setId(2L);
-        est4.setNome("BMW");
-
-
-        Estac est5 = new Estac();
-        est5.setId(2L);
-        est5.setNome("Gol");
-
-
-        return ResponseEntity.ok(List.of(
-                est1,
-                est2,
-                est3,
-                est4,
-                est5)
-        );
+    public ResponseEntity<List<Estac>> listar() {
+        List<Estac> listar = estacionamentoServices.listar();
+        return ResponseEntity.ok(listar);
 
     }
 
-    @GetMapping("/{id}") // cod_estacionamento
-    public ResponseEntity<Estac> obter(@PathVariable long id) {
-        Estac est1 = new Estac();
-        est1.setId(2L);
-        est1.setNome("Carros");
-        return ResponseEntity.ok(est1);
-    }
+
 }
