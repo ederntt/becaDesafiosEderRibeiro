@@ -1,17 +1,19 @@
-package com.eder.Modulo;
+package com.eder.Modulos;
 
 import java.time.LocalDate;
 
+
 public class Estac {
 
-    // aplicação nao rodou como esperado
     private String nome;
     private String telefone;
     private Double faturamentoGeral;
     private LocalDate data;
     private String listarVeiculos;
+    private Veiculo veiculo;
+    private Long id;
 
-    public String getNome(String nome) {
+    public String getNome() {
         return nome;
     }
 
@@ -51,19 +53,20 @@ public class Estac {
         this.listarVeiculos = listarVeiculos;
     }
 
-    public Estac() {
+    public Veiculo getVeiculo() {
+        return veiculo;
     }
 
-    public Estac(String nome, String telefone, Double faturamentoGeral, LocalDate data, String listarVeiculos) {
-        this.nome = nome;
-        this.telefone = telefone;
-        this.faturamentoGeral = faturamentoGeral;
-        this.data = data;
-        this.listarVeiculos = listarVeiculos;
+    public void setVeiculo(Veiculo veiculo) {
+        this.veiculo = veiculo;
     }
 
+    public Long getId() {
+        return id;
+    }
 
-    public static void setId(long l) {
+    public void setId(Long id) {
+        this.id = id;
     }
 }
 

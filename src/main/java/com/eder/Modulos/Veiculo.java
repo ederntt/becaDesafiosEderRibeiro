@@ -1,9 +1,11 @@
-package com.eder.Modulo;
+package com.eder.Modulos;
 
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
 public class Veiculo {
 
-    private long id;
+    private Long id;
     private String nomeMotorista;
     private String cpf;
     private String placaCarro;
@@ -11,24 +13,22 @@ public class Veiculo {
     private String horaSaida;
     private String pagamento;
 
-    public Veiculo() {
-    }
 
     public Veiculo(String nomeMotorista, String cpf, String placaCarro, String horaEntrada, String horaSaida, String pagamento) {
         this.nomeMotorista = nomeMotorista;
         this.cpf = cpf;
-        this.placaCarro = placaCarro;
         this.horaEntrada = horaEntrada;
         this.horaSaida = horaSaida;
         this.pagamento = pagamento;
 
     }
 
-    public long getId() {
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
