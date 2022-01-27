@@ -65,4 +65,15 @@ O projeto **Estacionamento GranParking** conta com sistema de vagas mensais, hor
 
 ## Diagrama
 
-![ERD -](https://user-images.githubusercontent.com/98030629/150402373-7087eef8-3ccb-4ea1-9f5e-f1ca3642feaf.png)
+IMAGEM RELACIONADA AO DESAFIO 2. CLASSES DE CONTROLLER e IMPLEMENTAÇÃO DE RESPONSE ENTITY
+
+
+![image](https://user-images.githubusercontent.com/98030629/151431932-f99c8667-0041-4113-8241-370986f8b195.png)
+
+![image](https://user-images.githubusercontent.com/98030629/151431989-d38e23b2-d0cf-4f49-be7d-2d432cc03f62.png)
+
+![image](https://user-images.githubusercontent.com/98030629/151432197-075b909a-f0f7-48a3-a677-b7b6fe624179.png)
+
+![image](https://user-images.githubusercontent.com/98030629/151432264-9c0650d1-5eac-4187-8f62-ec84fcc4078a.png)
+
+![image](https://user-images.githubusercontent.com/98030629/151432357-4f7bf6a9-186c-423b-bdc5-dfd2296a50b4.png)
