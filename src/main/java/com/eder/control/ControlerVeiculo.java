@@ -1,8 +1,6 @@
 package com.eder.control;
 
-import com.eder.Modulos.Estac;
 import com.eder.Modulos.Veiculo;
-import com.eder.services.EstacionamentoServices;
 import com.eder.services.VeiculoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -22,7 +20,6 @@ public class ControlerVeiculo {
         Veiculo veiculoCriado = veiculoServices.criar(veiculo);
         return ResponseEntity.created(null).body(veiculoCriado);
     }
-
     @PatchMapping("/{id}")
     public ResponseEntity<Veiculo> atualizar(@RequestBody Veiculo veiculo, @PathVariable Long id) {
         Veiculo veiculoAtualizar = veiculoServices.atualizar(veiculo, 4L);
@@ -30,7 +27,7 @@ public class ControlerVeiculo {
         return ResponseEntity.ok(veiculoAtualizar);
     }
 
-    @RequestMapping("/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<String> deletar(@PathVariable Long id) {
 
         veiculoServices.deletar(id);
