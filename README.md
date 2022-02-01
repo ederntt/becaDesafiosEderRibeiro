@@ -64,5 +64,20 @@ O projeto **Estacionamento GranParking** conta com sistema de vagas mensais, hor
 ```
 
 ## Diagrama
-
 ![image](https://user-images.githubusercontent.com/98030629/151240822-21ffd407-97d8-464d-aef0-abbc4e63be7c.png)
+
+## REPOSITORY, SERVICE E INTERFACE
+<img width="331" alt="repositor com service" src="https://user-images.githubusercontent.com/98030629/152023422-b5bfb5e2-4601-458b-899d-51bdce9a8cc9.png">
+
+## REPOSITORY
+<img width="523" alt="repository" src="https://user-images.githubusercontent.com/98030629/152023592-038da908-60d7-4344-a95d-b0dc48140f2a.png">
+
+## TELA DE APRESENTAÇÃO DO BD
+<img width="743" alt="TELA DE APRESENTACAO DO BD" src="https://user-images.githubusercontent.com/98030629/152023669-09d1fe5e-19da-4766-a695-fc17e4e8447d.png">
+
+## TELA DE CONFIGURAÇÃO DO H2 NA API
+<img width="898" alt="tela de Configure o banco de dados H2 na sua Api" src="https://user-images.githubusercontent.com/98030629/152023749-425fc9a4-7f78-4871-9ed2-fd67bcf99d2f.png">
+
+## TESTE DO BANCO DE DADOS OK
+<img width="386" alt="teste h2" src="https://user-images.githubusercontent.com/98030629/152023851-3791be83-8c2c-48ec-925b-edd6bbfeedd6.png">
+
