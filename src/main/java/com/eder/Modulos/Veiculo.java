@@ -1,10 +1,16 @@
 package com.eder.Modulos;
 
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import javax.persistence.*;
 
+
+@Entity
+@SequenceGenerator(name = "veiculos_seq", sequenceName = "veiculos_seq",
+initialValue = 1, allocationSize = 1)
 public class Veiculo {
 
+    @Id
+   @GeneratedValue(strategy = GenerationType.SEQUENCE,
+    generator = "veiculos_seq")
     private Long id;
     private String nomeMotorista;
     private String cpf;
@@ -13,8 +19,13 @@ public class Veiculo {
     private String horaSaida;
     private String pagamento;
 
+           @ManyToOne
+            private Estac estac;
 
-    public Veiculo(String nomeMotorista, String cpf, String placaCarro, String horaEntrada, String horaSaida, String pagamento) {
+            public Veiculo() {
+            }
+
+            public Veiculo(String nomeMotorista, int i) {
         this.nomeMotorista = nomeMotorista;
         this.cpf = cpf;
         this.horaEntrada = horaEntrada;
@@ -22,7 +33,6 @@ public class Veiculo {
         this.pagamento = pagamento;
 
     }
-
 
     public Long getId() {
         return id;
@@ -80,4 +90,3 @@ public class Veiculo {
         this.pagamento = pagamento;
     }
 }
-

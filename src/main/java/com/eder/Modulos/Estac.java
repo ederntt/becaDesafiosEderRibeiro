@@ -1,17 +1,32 @@
 package com.eder.Modulos;
 
-import java.time.LocalDate;
+import javax.persistence.*;
+import java.util.List;
 
-
+@Entity
+//@SequenceGenerator(name= "estac_seq", sequenceName = "estac_seq",
+//initialValue = 1, allocationSize = 1)
 public class Estac {
-
+    @Id
+   @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "estac_seq")
+    private Long id;
     private String nome;
     private String telefone;
     private Double faturamentoGeral;
-    private LocalDate data;
+    private String data;
     private String listarVeiculos;
-    private Veiculo veiculo;
-    private Long id;
+
+  @OneToMany(cascade = CascadeType.ALL)
+  @JoinColumn(name = "estac")
+    private List<Veiculo> veiculos;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getNome() {
         return nome;
@@ -37,11 +52,11 @@ public class Estac {
         this.faturamentoGeral = faturamentoGeral;
     }
 
-    public LocalDate getData() {
+    public String getData() {
         return data;
     }
 
-    public void setData(LocalDate data) {
+    public void setData(String data) {
         this.data = data;
     }
 
@@ -53,20 +68,12 @@ public class Estac {
         this.listarVeiculos = listarVeiculos;
     }
 
-    public Veiculo getVeiculo() {
-        return veiculo;
+    public List<Veiculo> getVeiculos() {
+        return veiculos;
     }
 
-    public void setVeiculo(Veiculo veiculo) {
-        this.veiculo = veiculo;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
+    public void setVeiculos(List<Veiculo> veiculos) {
+        this.veiculos = veiculos;
     }
 }
 
