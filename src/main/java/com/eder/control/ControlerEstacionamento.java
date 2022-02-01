@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping
+@RequestMapping("/estacionamento")
 public class ControlerEstacionamento {
 
     @Autowired
@@ -23,11 +23,11 @@ public class ControlerEstacionamento {
        return ResponseEntity.created(null).body(estacCriado);
 
     }
-//
+
     @PatchMapping("/{id}")
     public ResponseEntity<Estac> atualizar(@RequestBody Estac estac, @PathVariable Long id) {
 
-    Estac estacAtualizar = estacionamentoServices.atualizar(estac, 4L);
+    Estac estacAtualizar = estacionamentoServices.atualizar(estac, id);
 
         return ResponseEntity.ok(estacAtualizar);
     }
@@ -39,18 +39,18 @@ public class ControlerEstacionamento {
 
         return ResponseEntity.noContent().build();
     }
-    @GetMapping("/{id}")
-    public ResponseEntity<Estac> obter(@PathVariable Long id) {
-        Estac obterEstac = estacionamentoServices.obter(34L);
 
-        return ResponseEntity.ok(obterEstac);
-    }
     @GetMapping
     public ResponseEntity<List<Estac>> listar() {
         List<Estac> listar = estacionamentoServices.listar();
         return ResponseEntity.ok(listar);
-
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Estac> obter(@PathVariable Long id) {
+        Estac obterEstac = estacionamentoServices.obter(id);
+
+        return ResponseEntity.ok(obterEstac);
+    }
 
 }

@@ -25,7 +25,7 @@ public class ControlerVeiculo {
 
     @PatchMapping("/{id}")
     public ResponseEntity<Veiculo> atualizar(@RequestBody Veiculo veiculo, @PathVariable Long id) {
-        Veiculo veiculoAtualizar = veiculoServices.atualizar(veiculo, 4L);
+        Veiculo veiculoAtualizar = veiculoServices.atualizar(veiculo, id);
 
         return ResponseEntity.ok(veiculoAtualizar);
     }
@@ -42,7 +42,7 @@ public class ControlerVeiculo {
     @GetMapping("/{id}")
     public ResponseEntity<Veiculo> obter(@PathVariable Long id) {
 
-        Veiculo veiculoObter = veiculoServices.obter(34L);
+        Veiculo veiculoObter = veiculoServices.obter(id);
 
         return ResponseEntity.ok(veiculoObter);
     }
@@ -52,9 +52,6 @@ public class ControlerVeiculo {
 
        List<Veiculo> listar = veiculoServices.listar();
 
-        return ResponseEntity.ok(
-
-                List.of()
-        );
+        return ResponseEntity.ok(listar);
     }
 }
