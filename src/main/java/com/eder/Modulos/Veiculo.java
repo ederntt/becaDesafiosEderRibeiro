@@ -23,6 +23,10 @@ public class Veiculo {
 
     }
 
+    public Veiculo() {
+
+    }
+
 
     public Long getId() {
         return id;

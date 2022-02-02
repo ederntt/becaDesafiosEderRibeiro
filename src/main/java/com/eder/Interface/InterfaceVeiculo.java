@@ -4,7 +4,7 @@ import com.eder.Modulos.Veiculo;
 
 import java.util.List;
 
-public interface InterfaceVeiculo {
+public interface InterfaceVeiculo  {
 
     public Veiculo criar(Veiculo veiculo);
 
