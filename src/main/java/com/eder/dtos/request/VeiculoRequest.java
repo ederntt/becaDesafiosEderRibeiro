@@ -1,5 +1,7 @@
 package com.eder.dtos.request;
 
+import com.eder.modulos.Estac;
+
 public class VeiculoRequest {
 
     private String nome;
