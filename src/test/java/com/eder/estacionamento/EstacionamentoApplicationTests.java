@@ -1,4 +1,4 @@
-package com.eder.Estacionamento;
+package com.eder.estacionamento;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

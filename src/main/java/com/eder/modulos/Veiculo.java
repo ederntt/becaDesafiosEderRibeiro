@@ -1,10 +1,12 @@
-package com.eder.Modulos;
+package com.eder.modulos;
 
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import javax.persistence.*;
 
+@Entity
 public class Veiculo {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nomeMotorista;
     private String cpf;
@@ -13,20 +15,23 @@ public class Veiculo {
     private String horaSaida;
     private String pagamento;
 
-
-    public Veiculo(String nomeMotorista, String cpf, String placaCarro, String horaEntrada, String horaSaida, String pagamento) {
-        this.nomeMotorista = nomeMotorista;
-        this.cpf = cpf;
-        this.horaEntrada = horaEntrada;
-        this.horaSaida = horaSaida;
-        this.pagamento = pagamento;
-
-    }
+    @ManyToOne
+    private Estac estac;
 
     public Veiculo() {
 
     }
 
+    public Veiculo(Long id, String nomeMotorista, String cpf, String placaCarro, String horaEntrada, String horaSaida, String pagamento, Estac estac) {
+        this.id = id;
+        this.nomeMotorista = nomeMotorista;
+        this.cpf = cpf;
+        this.placaCarro = placaCarro;
+        this.horaEntrada = horaEntrada;
+        this.horaSaida = horaSaida;
+        this.pagamento = pagamento;
+        this.estac = estac;
+    }
 
     public Long getId() {
         return id;
@@ -82,6 +87,14 @@ public class Veiculo {
 
     public void setPagamento(String pagamento) {
         this.pagamento = pagamento;
+    }
+
+    public Estac getEstac() {
+        return estac;
+    }
+
+    public void setEstac(Estac estac) {
+        this.estac = estac;
     }
 }
 

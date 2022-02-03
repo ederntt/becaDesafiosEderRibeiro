@@ -1,9 +1,8 @@
 package com.eder.control;
 
-import com.eder.Modulos.Veiculo;
+import com.eder.modulos.Veiculo;
 import com.eder.dtos.request.VeiculoRequest;
-import com.eder.dtos.responses.VeiculoResponse;
-import com.eder.services.VeiculoService;
+import com.eder.nterface.InterfaceVeiculo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,19 +14,20 @@ import java.util.List;
 public class ControlerVeiculo {
 
     @Autowired
-    private VeiculoService veiculoServices;
+    private InterfaceVeiculo veiculoServices;
 
     @PostMapping
-    public ResponseEntity<VeiculoResponse> criar(@RequestBody VeiculoRequest veiculoRequest{
-        Veiculo veiculoCriado = veiculoServices.criar(veiculoRequest);
+    public ResponseEntity<Veiculo> criar(@RequestBody Veiculo veiculoRequest){
+        Veiculo veiculoResponse = veiculoServices.criar(veiculoRequest);
+
         return ResponseEntity.created(null).body(veiculoRequest);
     }
 
     @PatchMapping("/{id}")
     public ResponseEntity<Veiculo> atualizar(@RequestBody Veiculo veiculo, @PathVariable Long id) {
-        Veiculo veiculoAtualizar = veiculoServices.atualizar(veiculo, 4L);
+         Veiculo veiculoAtualizar = veiculoServices.atualizar(veiculo, id);
 
-        return ResponseEntity.ok(veiculoAtualizar);
+        return ResponseEntity.ok().body(veiculoAtualizar);
     }
 
     @DeleteMapping("/{id}")
@@ -42,9 +42,9 @@ public class ControlerVeiculo {
     @GetMapping("/{id}")
     public ResponseEntity<Veiculo> obter(@PathVariable Long id) {
 
-        Veiculo veiculoObter = veiculoServices.obter(34L);
+       Veiculo veiculoObtido = veiculoServices.obter(id);
 
-        return ResponseEntity.ok(veiculoObter);
+        return ResponseEntity.ok(veiculoObtido);
     }
 
     @GetMapping
@@ -52,9 +52,6 @@ public class ControlerVeiculo {
 
        List<Veiculo> listar = veiculoServices.listar();
 
-        return ResponseEntity.ok(
-
-                List.of()
-        );
+        return ResponseEntity.ok(listar);
     }
 }
