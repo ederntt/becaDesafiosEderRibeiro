@@ -1,38 +1,28 @@
-package com.eder.modulos;
+package com.eder.dtos.request;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.eder.modulos.Veiculo;
 
-import javax.persistence.*;
-import java.util.List;
+public class EstacionamentoRequest {
 
-@Entity
-public class Estac {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     private String nome;
     private String telefone;
     private Double faturamentoGeral;
     private String data;
     private String modelo;
+    private Veiculo veiculo;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "estac")
-    @JsonIgnore
-    private List<Veiculo> veiculos;
-
-    public Estac() {
+    public EstacionamentoRequest() {
     }
 
-    public Estac(Long id, String nome, String telefone, Double faturamentoGeral, String data, String modelo, List<Veiculo> veiculos) {
+    public EstacionamentoRequest(Long id, String nome, String telefone, Double faturamentoGeral, String data, String modelo, Veiculo veiculo) {
         this.id = id;
         this.nome = nome;
         this.telefone = telefone;
         this.faturamentoGeral = faturamentoGeral;
         this.data = data;
         this.modelo = modelo;
-        this.veiculos = veiculos;
+        this.veiculo = veiculo;
     }
 
     public Long getId() {
@@ -83,12 +73,12 @@ public class Estac {
         this.modelo = modelo;
     }
 
-    public List<Veiculo> getVeiculos() {
-        return veiculos;
+    public Veiculo getVeiculo() {
+        return veiculo;
     }
 
-    public void setVeiculos(List<Veiculo> veiculos) {
-        this.veiculos = veiculos;
+    public void setVeiculo(Veiculo veiculo) {
+        this.veiculo = veiculo;
     }
+
 }
-

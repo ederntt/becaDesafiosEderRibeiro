@@ -30,7 +30,6 @@ public class Veiculo {
         this.horaEntrada = horaEntrada;
         this.horaSaida = horaSaida;
         this.pagamento = pagamento;
-        this.estac = estac;
     }
 
     public Long getId() {
@@ -89,12 +88,5 @@ public class Veiculo {
         this.pagamento = pagamento;
     }
 
-    public Estac getEstac() {
-        return estac;
     }
-
-    public void setEstac(Estac estac) {
-        this.estac = estac;
-    }
-}
 
