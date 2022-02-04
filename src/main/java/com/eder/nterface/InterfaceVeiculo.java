@@ -1,13 +1,14 @@
 package com.eder.nterface;
 
 import com.eder.dtos.request.VeiculoRequest;
+import com.eder.dtos.responses.VeiculoResponse;
 import com.eder.modulos.Veiculo;
 
 import java.util.List;
 
 public interface InterfaceVeiculo  {
 
-    Veiculo criar(Veiculo veiculo);
+    VeiculoResponse criar(VeiculoRequest veiculoRequest);
 
     public Veiculo atualizar(Veiculo veiculo, Long id);
 

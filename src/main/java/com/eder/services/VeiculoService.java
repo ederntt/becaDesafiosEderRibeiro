@@ -1,5 +1,6 @@
 package com.eder.services;
 
+import com.eder.dtos.responses.VeiculoResponse;
 import com.eder.modulos.Veiculo;
 import com.eder.dtos.request.VeiculoRequest;
 import com.eder.nterface.InterfaceVeiculo;
@@ -19,12 +20,19 @@ public class VeiculoService implements InterfaceVeiculo {
     @Autowired
     private RepositoryVeiculo repositoryVeiculo;
 
-    @Override
-    public Veiculo criar(Veiculo veiculoRequest) {
+    public VeiculoResponse criar(VeiculoRequest veiculoRequest) {
 
-        Veiculo veiculoCriado = repositoryVeiculo.save(veiculoRequest);
+        Veiculo veiculo = new Veiculo();
+        veiculo.setModelo(veiculoRequest.getModelo());
+        veiculo.setPlacaCarro(veiculoRequest.getPlacaCarro());
+        veiculo.setHoraEntrada(veiculoRequest.getHoraEntrada());
+        veiculo.setHoraSaida(veiculoRequest.getHoraSaida());
+        veiculo.setPagamento(veiculoRequest.getPagamento());
 
-        return veiculoCriado;
+        Veiculo veiculoCriado = repositoryVeiculo.save(veiculo);
+        VeiculoResponse veiculoResponse = new VeiculoResponse();
+
+        return veiculoResponse;
     }
 
     public Veiculo atualizar(Veiculo veiculo, Long id) {
@@ -43,19 +51,10 @@ public class VeiculoService implements InterfaceVeiculo {
     }
 
     public Veiculo obter(Long id) {
-Veiculo veiculo = repositoryVeiculo.findById(id).get();
+        Veiculo veiculo = repositoryVeiculo.findById(id).get();
         return veiculo;
 
-        }
-
-
-//    public GetVeiculoObtido obter(Long id) {
-//   Veiculo veiculo= repositoryVeiculo.findById(id).get();
-//   GetVeiculoObtido getVeiculoObtido = new GetVeiculoObtido();
-//   getVeiculoObtido.setId(veiculo,getId());
-//
-//        return getVeiculoObtido;
-//    }
+    }
 
     public List<Veiculo> listar() {
         List<Veiculo> listarVeiculo = repositoryVeiculo.findAll();
