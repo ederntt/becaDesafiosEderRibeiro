@@ -6,7 +6,9 @@ import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 
 @Mapper
-public interface VeiculoMapper {
+public interface VeiculoMapper { // veiculo response
+
+
     Veiculo veiculo (VeiculoResponse veiculoResponse);
 
     @InheritInverseConfiguration

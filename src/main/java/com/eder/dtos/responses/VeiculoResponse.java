@@ -15,6 +15,7 @@ public class VeiculoResponse {
     private String horaEntrada;
     private String horaSaida;
     private String pagamento;
-
+    private String modelo;
+    private EstacResponse estacResponse;
 
 }

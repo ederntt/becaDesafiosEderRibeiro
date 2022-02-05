@@ -7,5 +7,9 @@ import lombok.Data;
 public class EstacResponse {
 
     private Long id;
+    private String nome;
+    private String telefone;
+    private Double faturamentoGeral;
+    private String data;
 
    }

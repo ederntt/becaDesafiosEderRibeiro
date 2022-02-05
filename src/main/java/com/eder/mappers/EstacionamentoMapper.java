@@ -6,10 +6,10 @@ import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 
 @Mapper
-public interface EstacionamentoMapper {
+public interface EstacionamentoMapper { // estacionamento response
 
-       Estac estac (EstacResponse estacResponse);
+       public EstacResponse toResponse (Estac estac);
 
-        @InheritInverseConfiguration
-        EstacResponse estacResponse (Estac estac);
+//        @InheritInverseConfiguration
+//        EstacResponse estacResponse (Estac estac);
     }

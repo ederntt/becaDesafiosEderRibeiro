@@ -15,6 +15,7 @@ public class VeiculoRequest {
     private String horaEntrada;
     private String horaSaida;
     private String Pagamento;
+    private EstacionamentoRequest estacionamentoRequest;
 
 
 //    public VeiculoRequest() {

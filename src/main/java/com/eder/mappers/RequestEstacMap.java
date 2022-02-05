@@ -8,7 +8,8 @@ import org.mapstruct.Mapper;
 public interface RequestEstacMap {
 
     @Mapper
-    public interface EstacMapper {
+    public interface EstacMapper { //estacionamento request
+        public Estac toModel(EstacionamentoRequest estacionamentoRequest);
         Estac estac (EstacionamentoRequest estacionamentoRequest);
 
         @InheritInverseConfiguration

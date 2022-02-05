@@ -14,8 +14,8 @@ public interface InterfaceVeiculo  {
 
     public void deletar(Long id);
 
-    Veiculo obter(Long id);
+    VeiculoResponse obter(Long id);
 
-    public List<Veiculo> listar();
+    public List<VeiculoResponse> listar();
 
 }
