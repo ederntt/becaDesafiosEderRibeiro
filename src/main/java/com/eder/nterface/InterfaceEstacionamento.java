@@ -1,6 +1,5 @@
 package com.eder.nterface;
 
-import com.eder.dtos.responses.EstacResponse;
 import com.eder.modulos.Estac;
 
 import java.util.List;
@@ -13,7 +12,7 @@ public interface InterfaceEstacionamento {
 
     public void deletar(Long id);
 
-    public List<EstacResponse> listar();
+    public List<Estac> listar();
 
-    public EstacResponse obter(Long id);
+    public Estac obter(Long id);
 }

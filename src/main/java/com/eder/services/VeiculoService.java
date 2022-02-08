@@ -1,63 +1,72 @@
 package com.eder.services;
 
-import com.eder.dtos.responses.VeiculoResponse;
-import com.eder.mappers.*;
+import com.eder.dtos.DtosVeiculo;
+import com.eder.exception.TratamentoErros;
 import com.eder.modulos.Veiculo;
-import com.eder.dtos.request.VeiculoRequest;
 import com.eder.nterface.InterfaceVeiculo;
 import com.eder.repository.RepositoryVeiculo;
+import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.TransactionalException;
 import java.util.List;
-import java.util.stream.Collectors;
 
-
+@Data
 @Service
 @RequiredArgsConstructor
 public class VeiculoService implements InterfaceVeiculo {
 
-    private final EstacionamentoServices estacionamentoServices;
     private final RepositoryVeiculo repositoryVeiculo;
-    private final VeiculoMapper mapperVeiculoRequest;
-    private final MapperVeiculoVeiResp mapperVeiculoVeiResp;
-    private final MapperVeiculoAtualizar mapperVeiculoAtualizar;
+//
+//    public Veiculo criar(@NotNull Veiculo veiculo) {
+//
+////        if (veiculo.getPlacaCarro().length() <= 4) {
+////            throw new RuntimeException("Dados da placa nao podem ser menores que 4 caracteres");
+////        }
+//
+//        Veiculo Veiculo = new Veiculo();
+//        veiculo.setModelo(veiculo.getModelo());
+//        veiculo.setPlacaCarro(veiculo.getPlacaCarro());
+//        veiculo.setHoraEntrada(veiculo.getHoraEntrada());
+//        veiculo.setHoraSaida(veiculo.getHoraSaida());
+//        veiculo.setPagamento(veiculo.getPagamento());
+//
+//        return repositoryVeiculo.save(veiculo);
+//
+//    }
 
-    public VeiculoResponse criar(VeiculoRequest veiculoRequest) {
+//    @Override // metodo criado para funcionar implements
+//    public DtosVeiculo criar(DtosVeiculo dtosVeiculo) {
+//        return null;
+//    }
 
-        RequestVeiMap veiculoMapper = null;
-        VeiculoRequest VeiculoRequest = null;
-        Veiculo veiculo = veiculoMapper.toModel(VeiculoRequest);
+    @Override
+    public Veiculo criar(Veiculo Veiculo) {
+        Veiculo veiculo = new Veiculo();
+        veiculo.setPlacaCarro(veiculo.getPlacaCarro());
+        veiculo.setModelo(veiculo.getModelo());
+        veiculo.setHoraEntrada(veiculo.getHoraEntrada());
+        veiculo.setHoraSaida(veiculo.getHoraSaida());
+        veiculo.setPagamento(veiculo.getPagamento());
 
-       repositoryVeiculo.save(veiculo);
-
-       VeiculoResponse veiculoResponse = mapperVeiculoVeiResp.toResponse(veiculo);
-
-//        VeiculoResponse veiculoResponse = new VeiculoResponse();
-//        veiculo.setModelo(veiculoRequest.getModelo());
-//        veiculo.setPlacaCarro(veiculoRequest.getPlacaCarro());
-//        veiculo.setHoraEntrada(veiculoRequest.getHoraEntrada());
-//        veiculo.setHoraSaida(veiculoRequest.getHoraSaida());
-//        veiculo.setPagamento(veiculoRequest.getPagamento());
-
-//        Veiculo veiculoCriado = repositoryVeiculo.save(veiculo);
-
-        return veiculoResponse;
+        Veiculo veiculoCriado  = repositoryVeiculo.save(veiculo);
+        return veiculo;
     }
 
     @Override
     public Veiculo atualizar(Veiculo veiculo, Long id) {
-        return null;
-    }
+        Veiculo modificar = this.obter(id);
+        modificar.setCpf(veiculo.getCpf());
+        modificar.setModelo(veiculo.getModelo());
+        modificar.setPlacaCarro(veiculo.getPlacaCarro());
+        modificar.setNomeMotorista(veiculo.getNomeMotorista());
+        modificar.setHoraEntrada(veiculo.getHoraEntrada());
+        modificar.setHoraSaida(veiculo.getHoraSaida());
+        modificar.setPagamento(veiculo.getPagamento());
 
-    public VeiculoResponse atualizar(VeiculoRequest veiculoRequest, Long id) {
-        Veiculo veiculoObtido = repositoryVeiculo.findById(id).get();
-
-mapperVeiculoAtualizar.atualizar(veiculoRequest, veiculoObtido);
-        repositoryVeiculo.save(veiculoObtido);
-
-        return mapperVeiculoVeiResp.toResponse(veiculoObtido);
-
+        repositoryVeiculo.save(modificar);
+        return modificar;
     }
 
     public void deletar(Long id) {
@@ -65,19 +74,22 @@ mapperVeiculoAtualizar.atualizar(veiculoRequest, veiculoObtido);
 
     }
 
-    public VeiculoResponse obter(Long id) {
+    public Veiculo obter(Long id) {
 
-     Veiculo veiculo = repositoryVeiculo.findById(id).get();
-        return mapperVeiculoVeiResp.toResponse(veiculo);
-
+        Veiculo veiculo = repositoryVeiculo.findById(id).get();
+        if (veiculo == null) {
+            throw new RuntimeException(" opção indisponivel");
+        }
+        return repositoryVeiculo.findById(id)
+                .orElseThrow(RuntimeException::new);
     }
 
-    public List<VeiculoResponse> listar() {
+    public List<Veiculo> listar() {
         List<Veiculo> listarVeiculo = repositoryVeiculo.findAll();
 
-       return listarVeiculo
-                .stream()
-                .map(mapperVeiculoVeiResp::toResponse)
-                .collect(Collectors.toList());
+        if (listarVeiculo == null) {
+            throw new TratamentoErros(" opção indisponivel");
+        }
+        return listarVeiculo;
     }
 }
