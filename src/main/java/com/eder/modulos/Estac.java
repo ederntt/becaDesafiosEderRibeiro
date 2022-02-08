@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.List;
 
 @Data
@@ -17,8 +18,8 @@ public class Estac {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
-    private String nome;
-    private String telefone;
+    private String nome = "Gran Parking";
+    private String telefone = "(41) 4002-8922";
     private Double faturamentoGeral;
     private String data;
 

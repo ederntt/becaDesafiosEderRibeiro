@@ -3,6 +3,7 @@ package com.eder.modulos;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.validator.constraints.br.CPF;
 
 import javax.persistence.*;
 @Data
@@ -12,15 +13,16 @@ import javax.persistence.*;
 public class Veiculo {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     private String nomeMotorista;
     private String cpf;
+    private String modelo;
     private String placaCarro;
     private String horaEntrada;
     private String horaSaida;
     private String pagamento;
-    private String modelo;
+
 
     @ManyToOne
     private Estac estac;
