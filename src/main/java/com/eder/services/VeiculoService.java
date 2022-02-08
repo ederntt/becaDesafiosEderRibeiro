@@ -1,6 +1,5 @@
 package com.eder.services;
 
-import com.eder.dtos.DtosVeiculo;
 import com.eder.exception.TratamentoErros;
 import com.eder.modulos.Veiculo;
 import com.eder.nterface.InterfaceVeiculo;
@@ -9,7 +8,6 @@ import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import javax.transaction.TransactionalException;
 import java.util.List;
 
 @Data

@@ -1,5 +1,6 @@
 package com.eder.modulos;
 
+import com.eder.dtos.DtosVeiculo;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,7 +11,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Veiculo {
+public class Veiculo extends DtosVeiculo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)

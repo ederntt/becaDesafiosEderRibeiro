@@ -1,5 +1,6 @@
 package com.eder.services;
 
+
 import com.eder.exception.TratamentoErros;
 import com.eder.mappers.MapperEstacionamento;
 import com.eder.modulos.Estac;
@@ -20,7 +21,7 @@ public class EstacionamentoServices implements InterfaceEstacionamento {
 
 
     @Override
-    public Estac criar (Estac estac){
+    public Estac criar(Estac estac) {
         return repositoryEstac.save(estac);
     }
 
@@ -38,15 +39,15 @@ public class EstacionamentoServices implements InterfaceEstacionamento {
         repositoryEstac.deleteById(id);
     }
 
-    public List<Estac> listar(){
+    public List<Estac> listar() {
         return repositoryEstac.findAll();
     }
 
     public Estac obter(Long id) {
         Estac estac = repositoryEstac.findById(id).get();
-            if (estac == null) {
-                throw new TratamentoErros(" opção indisponivel");
-            }
+        if (estac == null) {
+            throw new TratamentoErros(" opção indisponivel");
+        }
         return repositoryEstac.findById(id)
                 .orElseThrow(TratamentoErros::new);
     }
