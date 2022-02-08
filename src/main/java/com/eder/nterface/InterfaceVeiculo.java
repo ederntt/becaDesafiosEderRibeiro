@@ -1,6 +1,6 @@
-package com.eder.Interface;
+package com.eder.nterface;
 
-import com.eder.Modulos.Veiculo;
+import com.eder.modulos.Veiculo;
 
 import java.util.List;
 
@@ -12,7 +12,9 @@ public interface InterfaceVeiculo {
 
     public void deletar(Long id);
 
-    public Veiculo obter(Long id);
+    Veiculo obter(Long id);
 
     public List<Veiculo> listar();
+
+
 }

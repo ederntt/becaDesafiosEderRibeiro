@@ -1,72 +1,93 @@
 package com.eder.services;
 
-import com.eder.Interface.InterfaceVeiculo;
-import com.eder.Modulos.Estac;
-import com.eder.Modulos.Veiculo;
+import com.eder.exception.TratamentoErros;
+import com.eder.modulos.Veiculo;
+import com.eder.nterface.InterfaceVeiculo;
+import com.eder.repository.RepositoryVeiculo;
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Data
 @Service
+@RequiredArgsConstructor
 public class VeiculoService implements InterfaceVeiculo {
 
-    private VeiculoService veiculoService;
+    private final RepositoryVeiculo repositoryVeiculo;
+//
+//    public Veiculo criar(@NotNull Veiculo veiculo) {
+//
+////        if (veiculo.getPlacaCarro().length() <= 4) {
+////            throw new RuntimeException("Dados da placa nao podem ser menores que 4 caracteres");
+////        }
+//
+//        Veiculo Veiculo = new Veiculo();
+//        veiculo.setModelo(veiculo.getModelo());
+//        veiculo.setPlacaCarro(veiculo.getPlacaCarro());
+//        veiculo.setHoraEntrada(veiculo.getHoraEntrada());
+//        veiculo.setHoraSaida(veiculo.getHoraSaida());
+//        veiculo.setPagamento(veiculo.getPagamento());
+//
+//        return repositoryVeiculo.save(veiculo);
+//
+//    }
 
-    public Veiculo criar(Veiculo veiculo) {
+//    @Override // metodo criado para funcionar implements
+//    public DtosVeiculo criar(DtosVeiculo dtosVeiculo) {
+//        return null;
+//    }
 
-        System.out.println(veiculo);
-      if (veiculo.getNomeMotorista().length()< 3) {
-           throw new RuntimeException("Nome do motorista noa pode ser menor que 3 caracteres");
-        }
-         veiculo.setId(2L);
-      return veiculo;
+    @Override
+    public Veiculo criar(Veiculo Veiculo) {
+        Veiculo veiculo = new Veiculo();
+        veiculo.setPlacaCarro(veiculo.getPlacaCarro());
+        veiculo.setModelo(veiculo.getModelo());
+        veiculo.setHoraEntrada(veiculo.getHoraEntrada());
+        veiculo.setHoraSaida(veiculo.getHoraSaida());
+        veiculo.setPagamento(veiculo.getPagamento());
+
+        Veiculo veiculoCriado  = repositoryVeiculo.save(veiculo);
+        return veiculo;
     }
 
+    @Override
     public Veiculo atualizar(Veiculo veiculo, Long id) {
+        Veiculo modificar = this.obter(id);
+        modificar.setCpf(veiculo.getCpf());
+        modificar.setModelo(veiculo.getModelo());
+        modificar.setPlacaCarro(veiculo.getPlacaCarro());
+        modificar.setNomeMotorista(veiculo.getNomeMotorista());
+        modificar.setHoraEntrada(veiculo.getHoraEntrada());
+        modificar.setHoraSaida(veiculo.getHoraSaida());
+        modificar.setPagamento(veiculo.getPagamento());
 
-       Veiculo veiculoAtualizar = veiculoService.atualizar(veiculo, 4L);
-        return veiculo;
+        repositoryVeiculo.save(modificar);
+        return modificar;
     }
 
     public void deletar(Long id) {
-        //
+        repositoryVeiculo.deleteById(id);
+
     }
 
     public Veiculo obter(Long id) {
-        Veiculo veiculo = new Veiculo("Alberto","12345678-90","avb123",
-                "14:20", "15:10","Débito");
 
-        Veiculo veiculo1= new Veiculo( "Roberto", "0652347233-06", "acd3456",
-                "13:45", "16:43", "Credito");
-
-        Veiculo veiculo2= new Veiculo( "Camila", "1234667788-08", "tyu7654",
-                "21:45", "07:43", "Debito");
-
-        return veiculo;
+        Veiculo veiculo = repositoryVeiculo.findById(id).get();
+        if (veiculo == null) {
+            throw new RuntimeException(" opção indisponivel");
+        }
+        return repositoryVeiculo.findById(id)
+                .orElseThrow(RuntimeException::new);
     }
 
     public List<Veiculo> listar() {
-        Estac est1 = new Estac();
-        est1.setNome(String.valueOf(1L));
-        est1.setNome("Caio");
+        List<Veiculo> listarVeiculo = repositoryVeiculo.findAll();
 
-        Estac est2 = new Estac();
-        est2.setNome(String.valueOf(2L));
-        est2.setNome("Miranda");
-
-
-        Veiculo veiculo = new Veiculo("Alberto","12345678-90","avb123",
-                "14:20", "15:10","Débito");
-
-        Veiculo veiculo1= new Veiculo( "Roberto", "0652347233-06", "acd3456",
-                "13:45", "16:43", "Credito");
-
-        Veiculo veiculo2= new Veiculo( "Camila", "1234667788-08", "tyu7654",
-                "21:45", "07:43", "Debito");
-
-        return List.of(veiculo,
-              veiculo1,
-                veiculo2
-           );
+        if (listarVeiculo == null) {
+            throw new TratamentoErros(" opção indisponivel");
+        }
+        return listarVeiculo;
     }
 }

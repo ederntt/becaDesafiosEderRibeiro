@@ -1,6 +1,6 @@
-package com.eder.Interface;
+package com.eder.nterface;
 
-import com.eder.Modulos.Estac;
+import com.eder.modulos.Estac;
 
 import java.util.List;
 
