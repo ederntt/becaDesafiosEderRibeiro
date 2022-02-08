@@ -1,7 +1,7 @@
 package com.eder.control;
 
-import com.eder.dtos.request.EstacionamentoRequest;
-import com.eder.dtos.responses.EstacResponse;
+import com.eder.dtos.DtosEstacionamento;
+import com.eder.mappers.MapperEstacionamento;
 import com.eder.modulos.Estac;
 import com.eder.services.EstacionamentoServices;
 import lombok.RequiredArgsConstructor;
@@ -12,25 +12,28 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/estacionamento")
 @RequiredArgsConstructor
+@RequestMapping("/estacionamento")
 public class ControlerEstacionamento {
 
-
+    @Autowired
     private final EstacionamentoServices estacionamentoServices;
 
-    @PostMapping
-    public ResponseEntity<EstacResponse> criar(@RequestBody EstacionamentoRequest estacionamentoRequest) {
-        EstacResponse estacResponse = estacionamentoServices.criar(estacionamentoRequest);
+    @Autowired
+    private MapperEstacionamento mapperEstacionamento;
 
-        return ResponseEntity.created(null).body(estacResponse);
+    @PostMapping
+    public ResponseEntity<Estac> criar(@RequestBody Estac estac) {
+        Estac estacCriado = estacionamentoServices.criar(estac);
+
+        return ResponseEntity.created(null).body(estacCriado);
     }
 
     @PatchMapping("/{id}")
-    public ResponseEntity<EstacResponse> atualizar(@RequestBody EstacionamentoRequest estacionamentoRequest, @PathVariable Long id) {
-        EstacResponse estacResponse = estacionamentoServices.atualizar(estacionamentoRequest, id);
+    public ResponseEntity<Estac> atualizar(@RequestBody Estac estac, @PathVariable Long id) {
+        Estac estac1 = estacionamentoServices.atualizar(estac, id);
 
-        return ResponseEntity.ok(estacResponse);
+        return ResponseEntity.ok(estac1);
     }
 
     @DeleteMapping("/{id}")
@@ -41,18 +44,17 @@ public class ControlerEstacionamento {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<EstacResponse> obter(@PathVariable Long id) {
-        EstacResponse estacResponse = estacionamentoServices.obter(3L);
+    public ResponseEntity<Estac> obter(@PathVariable Long id) {
+        Estac estac1 = estacionamentoServices.obter(id);
 
-        return ResponseEntity.ok(estacResponse);
+        return ResponseEntity.ok(estac1);
     }
 
     @GetMapping
-    public ResponseEntity<List<EstacResponse>> listar() {
-        List<EstacResponse> listar = estacionamentoServices.listar();
-        return ResponseEntity.ok(listar);
+    public ResponseEntity<List<DtosEstacionamento>> listar() {
+        List<Estac> listar = estacionamentoServices.listar();
+
+        return ResponseEntity.ok(mapperEstacionamento.estacToDtoEstac(listar));
 
     }
-
-
 }

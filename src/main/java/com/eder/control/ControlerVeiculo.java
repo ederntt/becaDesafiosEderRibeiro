@@ -1,39 +1,38 @@
 package com.eder.control;
 
-import com.eder.dtos.request.VeiculoRequest;
-import com.eder.dtos.responses.VeiculoResponse;
+import com.eder.dtos.DtosVeiculo;
+import com.eder.mappers.MapperVeiculo;
 import com.eder.modulos.Veiculo;
 import com.eder.nterface.InterfaceVeiculo;
 import com.eder.services.VeiculoService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/veiculo")
 @RequiredArgsConstructor
+@RequestMapping("/veiculo")
 public class ControlerVeiculo {
-
 
     private InterfaceVeiculo veiculoServices;
     private final VeiculoService veiculoService;
+    private MapperVeiculo mapperVeiculo;
 
     @PostMapping
-    public ResponseEntity<VeiculoResponse> criar(@RequestBody VeiculoRequest veiculoRequest){
+    public ResponseEntity<Veiculo> criar(@RequestBody Veiculo veiculo){
 
-        VeiculoResponse veiculoResponse = veiculoServices.criar(veiculoRequest);
+        Veiculo veiculo1 = veiculoServices.criar(veiculo);
 
-        return ResponseEntity.created(null).body(veiculoResponse);
+        return ResponseEntity.created(null).body(veiculo1);
     }
 
     @PatchMapping("/{id}")
-    public ResponseEntity<Veiculo> atualizar(@RequestBody Veiculo veiculoRequest, @PathVariable Long id) {
-         Veiculo veiculoResponse = veiculoServices.atualizar(veiculoRequest, id);
+    public ResponseEntity<Veiculo> atualizar(@RequestBody Veiculo veiculo, @PathVariable Long id) {
+         Veiculo dtoVeiculo = veiculoServices.atualizar(veiculo, id);
 
-        return ResponseEntity.ok().body(veiculoResponse);
+        return ResponseEntity.ok().body(dtoVeiculo);
     }
 
     @DeleteMapping("/{id}")
@@ -44,20 +43,19 @@ public class ControlerVeiculo {
         return ResponseEntity.noContent().build();
     }
 
-
     @GetMapping("/{id}")
-    public ResponseEntity<VeiculoResponse> obter(@PathVariable Long id) {
+    public ResponseEntity<Veiculo> obter(@PathVariable Long id) {
 
-       VeiculoResponse veiculoObtido = veiculoServices.obter(id);
+       Veiculo veiculoObtido = veiculoServices.obter(id);
 
         return ResponseEntity.ok(veiculoObtido);
     }
 
     @GetMapping
-    public ResponseEntity<List<VeiculoResponse>> listar() {
+    public ResponseEntity<List<DtosVeiculo>> listar() {
 
-       List<VeiculoResponse> listar = veiculoServices.listar();
+       List<Veiculo> listar1 = veiculoServices.listar();
 
-        return ResponseEntity.ok(listar);
+        return ResponseEntity.ok(mapperVeiculo.veiculoToDtoVeiculo(listar1));
     }
 }
