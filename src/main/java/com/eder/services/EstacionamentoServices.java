@@ -18,11 +18,10 @@ public class EstacionamentoServices implements InterfaceEstacionamento {
     private final RepositoryEstac repositoryEstac;
     private final MapperEstacionamento mapperEstacionamento;
 
+
     @Override
-    public Estac criar(Estac estac) {
-        if (estac == null) {
-            throw new TratamentoErros(" opção indisponivel");
-        }  return repositoryEstac.save(estac);
+    public Estac criar (Estac estac){
+        return repositoryEstac.save(estac);
     }
 
     public Estac atualizar(Estac estac, Long id) {
@@ -39,15 +38,15 @@ public class EstacionamentoServices implements InterfaceEstacionamento {
         repositoryEstac.deleteById(id);
     }
 
-    public List<Estac> listar() {
+    public List<Estac> listar(){
         return repositoryEstac.findAll();
     }
 
     public Estac obter(Long id) {
         Estac estac = repositoryEstac.findById(id).get();
-        if (estac == null) {
-            throw new TratamentoErros(" opção indisponivel");
-        }
+            if (estac == null) {
+                throw new TratamentoErros(" opção indisponivel");
+            }
         return repositoryEstac.findById(id)
                 .orElseThrow(TratamentoErros::new);
     }

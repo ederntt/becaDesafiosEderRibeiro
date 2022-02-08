@@ -6,13 +6,13 @@ import java.util.List;
 
 public interface InterfaceEstacionamento {
 
-    Estac criar(Estac estac);
+    public Estac criar(Estac estac);
 
-    Estac atualizar( Estac estac,  Long id);
+    public Estac atualizar( Estac estac,  Long id);
 
-    void deletar(Long id);
+    public void deletar(Long id);
 
-    List<Estac> listar();
+    public List<Estac> listar();
 
-    Estac obter(Long id);
+    public Estac obter(Long id);
 }
