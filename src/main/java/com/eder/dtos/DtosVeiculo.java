@@ -12,6 +12,7 @@ import javax.validation.constraints.Size;
 public class DtosVeiculo {
 
     private String modelo;
+    @Size(min = 7, message = "Placa invalida! ")
     private String placaCarro;
     private String horaEntrada;
     private String horaSaida;

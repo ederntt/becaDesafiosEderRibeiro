@@ -12,7 +12,7 @@ public class Erro {
     public ResponseEntity<Padrao> Erro(TratamentoErros t) {
 
         Padrao padrao = new Padrao();
-        padrao.setMensagem(t .getMessage());
+        padrao.setMensagem(t.getMessage());
         padrao.setCodigo(HttpStatus.NOT_ACCEPTABLE.value());
 
         return ResponseEntity.status(padrao.getCodigo()).body(padrao);

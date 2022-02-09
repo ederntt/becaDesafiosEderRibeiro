@@ -20,23 +20,18 @@ public class VeiculoService implements InterfaceVeiculo {
     private final RepositoryVeiculo repositoryVeiculo;
 
     @Override
-    public Veiculo criar(Veiculo Veiculo) {
+    public Veiculo criar(Veiculo veiculo) {
 
-        Veiculo veiculo = new Veiculo();
-        veiculo.setPlacaCarro(veiculo.getPlacaCarro());
-        if (Veiculo.getPlacaCarro() == null) {
-            throw new TratamentoErros("placa do carro nao pode ser menor que 4 caracteres");
-        }
-        veiculo.setModelo(veiculo.getModelo());
-        veiculo.setHoraEntrada(veiculo.getHoraEntrada());
-        veiculo.setHoraSaida(veiculo.getHoraSaida());
-        veiculo.setPagamento(veiculo.getPagamento());
+        Veiculo veiculoCriado = new Veiculo();
+        veiculoCriado.setPlacaCarro(veiculo.getPlacaCarro());
+        veiculoCriado.setModelo(veiculo.getModelo());
+        veiculoCriado.setHoraEntrada(veiculo.getHoraEntrada());
+        veiculoCriado.setHoraSaida(veiculo.getHoraSaida());
+        veiculoCriado.setPagamento(veiculo.getPagamento());
 
-        Veiculo veiculoCriado = repositoryVeiculo.save(veiculo);
-        if (veiculoCriado == null) {
-            throw new TratamentoErros("invalido");
-        }
-        return veiculo;
+        Veiculo veiculoCriado1 = repositoryVeiculo.save(veiculo);
+
+        return veiculoCriado1;
     }
 
     @Override
@@ -62,19 +57,18 @@ public class VeiculoService implements InterfaceVeiculo {
 
     public Veiculo obter(Long id) {
 
-        Veiculo veiculo = repositoryVeiculo.findById(id).get();
-        if (veiculo == null) {
-            throw new RuntimeException(" opção indisponivel");
+        try {
+          return repositoryVeiculo.findById(id).get();
+        } catch (java.util.NoSuchElementException nome) {
+            throw new TratamentoErros(nome.getMessage());
         }
-        return repositoryVeiculo.findById(id)
-                .orElseThrow(RuntimeException::new);
     }
 
-    public List<Veiculo> listar() {
+    public List<Veiculo> listar() {   // verificar com flavius
         List<Veiculo> listarVeiculo = repositoryVeiculo.findAll();
 
         if (listarVeiculo == null) {
-            throw new TratamentoErros(" opção indisponivel");
+            throw new TratamentoErros("Lista indisponivel");
         }
         return listarVeiculo;
     }
