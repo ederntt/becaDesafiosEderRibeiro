@@ -1,7 +1,6 @@
 package com.eder.control;
 
 import com.eder.dtos.DtosVeiculo;
-import com.eder.mappers.MapperVeiculo;
 import com.eder.modulos.Veiculo;
 import com.eder.nterface.InterfaceVeiculo;
 import com.eder.services.VeiculoService;
@@ -12,50 +11,49 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequiredArgsConstructor
 @RequestMapping("/veiculo")
+@RequiredArgsConstructor
 public class ControlerVeiculo {
 
-    private InterfaceVeiculo veiculoServices;
     private final VeiculoService veiculoService;
-    private MapperVeiculo mapperVeiculo;
 
     @PostMapping
     public ResponseEntity<Veiculo> criar(@RequestBody Veiculo veiculo){
 
-        Veiculo veiculo1 = veiculoServices.criar(veiculo);
+        Veiculo veiculo1 = veiculoService.criar(veiculo);
 
         return ResponseEntity.created(null).body(veiculo1);
     }
 
     @PatchMapping("/{id}")
     public ResponseEntity<Veiculo> atualizar(@RequestBody Veiculo veiculo, @PathVariable Long id) {
-         Veiculo dtoVeiculo = veiculoServices.atualizar(veiculo, id);
+         Veiculo veiculo1 = veiculoService.atualizar(veiculo, id);
 
-        return ResponseEntity.ok().body(dtoVeiculo);
+        return ResponseEntity.ok().body(veiculo1);
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deletar(@PathVariable Long id) {
 
-        veiculoServices.deletar(id);
+        veiculoService.deletar(id);
 
         return ResponseEntity.noContent().build();
     }
 
+
     @GetMapping("/{id}")
-    public ResponseEntity<Veiculo> obter(@PathVariable Long id) {
+    public ResponseEntity<DtosVeiculo> obter(@PathVariable Long id) {
 
-       Veiculo veiculoObtido = veiculoServices.obter(id);
+        Veiculo veiculo1 = veiculoService.obter(id);
 
-        return ResponseEntity.ok(veiculoObtido);
+        return ResponseEntity.ok(veiculo1);
     }
 
     @GetMapping
-    public ResponseEntity<List<DtosVeiculo>> listar() {
+    public ResponseEntity<List<Veiculo>> listar() {
 
-       List<Veiculo> listar1 = veiculoServices.listar();
+       List<Veiculo> listar = veiculoService.listar();
 
-        return ResponseEntity.ok(mapperVeiculo.veiculoToDtoVeiculo(listar1));
+        return ResponseEntity.ok(listar);
     }
 }
