@@ -4,27 +4,12 @@
 <img src="https://ik.imagekit.io/gzogywm8vya/banner_estacionamento_rqqeoyAahE.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1642687192657.png"
 </h1> 
 
-
-
-## Indice
-- [Sobre](#-Sobre)
-- [Tecnologias utilizadas](#-Tecnologia-Utilizada)
-- [Como baixar o projeto](#-Baixando-o-projeto)
-- [Sobre o estacionamento](#-O-estacionamento-conta-com)
-
----
 ---
 <br></br>
 <b>Estacionamento GranParking</b>
 <br></br>
 ---
 
-
-<br></br>
-## Sobre:
-O projeto **Estacionamento GranParking** conta com sistema de vagas mensais, horistas, diarias e por periodo. Tambem  conta com duchas automatizadas.
-
-<br></br>
 
 ## Tecnologia Utilizada
 - [java](https://www.java.com/pt-BR/)
@@ -34,18 +19,6 @@ O projeto **Estacionamento GranParking** conta com sistema de vagas mensais, hor
 <br></br>
 <br></br>
 
-
-**O estacionamento conta com:**
-- Segurança 24 horas
-- Câmeras de monitoramento
-- Convênio
-- Duchas automatizadas
-- Funcionarios Capacitados
-- Motorista de Estacionamento
-
----
-<br></br>
-<br></br>
 
 ## Baixando o projeto
 
