@@ -17,14 +17,6 @@
 <br></br>
 <b>Estacionamento GranParking</b>
 <br></br>
----
-
-
-<br></br>
-## Sobre:
-O projeto **Estacionamento GranParking** conta com sistema de vagas mensais, horistas, diarias e por periodo. Tambem  conta com duchas automatizadas.
-
-<br></br>
 
 ## Tecnologia Utilizada
 - [java](https://www.java.com/pt-BR/)
@@ -34,18 +26,6 @@ O projeto **Estacionamento GranParking** conta com sistema de vagas mensais, hor
 <br></br>
 <br></br>
 
-
-**O estacionamento conta com:**
-- Segurança 24 horas
-- Câmeras de monitoramento
-- Convênio
-- Duchas automatizadas
-- Funcionarios Capacitados
-- Motorista de Estacionamento
-
----
-<br></br>
-<br></br>
 
 ## Baixando o projeto
 
@@ -65,7 +45,8 @@ O projeto **Estacionamento GranParking** conta com sistema de vagas mensais, hor
 
 ## Diagrama
 
-![image](https://user-images.githubusercontent.com/98030629/151240822-21ffd407-97d8-464d-aef0-abbc4e63be7c.png)
+<img width="569" alt="Captura de tela 2022-02-08 231439" src="https://user-images.githubusercontent.com/98030629/153108995-a1dda8d0-227d-444d-959b-438a838ed661.png">
+
 
 
 
