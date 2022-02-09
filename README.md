@@ -22,17 +22,39 @@
 - [Postman - Simulação de Interface](https://www.postman.com/)
 - H2 - Banco de Dados. Console
 
-Spring Boot.
-JPA.
-Lambdas.
-JDBC.
-JSON.
-Swagger.
+- Spring Boot.
+- JPA.
+- Lambdas.
+- JDBC.
+- JSON.
+- Swagger.
 
-<br></br>
-<br></br>
+## Desafios
+- [Desafio 1](https://github.com/ederntt/becaDesafiosEderRibeiro/edit/main/README.md)
+Criar um projeto spring Boot, implementar as classes feitas na modelagem em um pacote, criar um repositório no git pessoal “becaDesafiosSeuNome” e utilizar o mesmo para entrega de todos os desafios.
 
+- [Desafio 2](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/novodesafio)
+Criar classes de controllers na sua API (CRUD), implementar o OpenAPI no Spring Rest API, implementar ResponseEntity nos retornos das chamadas!
 
+- [Desafio 3](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/Desafio3_)
+Criar classes de service na sua API, implementar interfaces e declarar os metódos que irão ser utilizados, fazer a integração com a camada de controller;
+
+- [Desafio 4](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/Desafio4)
+Criar as classes de repository na API, configurar o banco de dados H2 na Api, implementar na camada service, fazer os testes para certificar que a base de dados está integrada.
+
+- [Desafio 5](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/Desafio5)
+Aplicar os conceitos de DTO na sua aplicação, fazer um relacionamento de tabelas na API, criar um novo end-point para retornar um DTO personalizado, agrupamento de várias informações em diferentes tabelas da sua base de dados.
+
+- [Desafio 6](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/desafio6)
+Adicionar validações de dados na API, adicionar Mapper na aplicação para a conversão de objetos, implementar Lombook na aplicação.
+
+- [Desafio 7](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/desafio7)
+Fazer o tratamento das exception utilizando try catch , fazer o tratamento utilizando throw e @ExceptionHandler, aproveitar o método criado com @ExceptionHandler e criar a própria classe para tratamento de exceptions utilizando @ControllerAdvice.
+
+- [Desafio 8]()
+ Criar um docker-compose.yml, subir um container contendo uma base de dados, integrar sua Api com a base de dados, fazer os testes de integração com a nova base de dados;
+
+´´´
 
 ## Baixando o projeto
 
