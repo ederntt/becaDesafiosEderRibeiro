@@ -18,12 +18,12 @@
 - [Postman - Simulação de Interface](https://www.postman.com/)
 - H2 - Banco de Dados. Console
 
-- Spring Boot.
-- JPA.
-- Lambdas.
-- JDBC.
-- JSON.
-- Swagger.
+- Spring Boot. (Sem link de acesso)
+- JPA. (Sem link de acesso)
+- Lambdas. (Sem link de acesso)
+- JDBC. (Sem link de acesso)
+- JSON. (Sem link de acesso)
+- Swagger. (Sem link de acesso)
 
 ## Desafios
 - [Desafio 1](https://github.com/ederntt/becaDesafiosEderRibeiro/edit/main/README.md)
