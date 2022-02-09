@@ -11,12 +11,6 @@
 ---
 
 
-<br></br>
-## Sobre:
-O projeto **Estacionamento GranParking** conta com sistema de vagas mensais, horistas, diarias e por periodo. Tambem  conta com duchas automatizadas.
-
-<br></br>
-
 ## Tecnologia Utilizada
 - [java](https://www.java.com/pt-BR/)
 - [Spring boot](https://spring.io/projects/spring-boot)
