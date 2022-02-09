@@ -4,10 +4,25 @@
 <img src="https://ik.imagekit.io/gzogywm8vya/banner_estacionamento_rqqeoyAahE.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1642687192657.png"
 </h1> 
 
-## Tecnologia Utilizada
+
+## Curso
+- https://nttdatalearn.udemy.com/course/fundamentos-de-programacao-com-java/learn/lecture/5740792#overview
+
+## Tecnologias e ferramentas Utilizadas
 - [java](https://www.java.com/pt-BR/)
 - [Spring boot](https://spring.io/projects/spring-boot)
 - [MySQL](https://www.mysql.com/products/workbench/)
+- [Draw.io - Aplicar UML](https://drawio.bbva.com/)
+- [Intelij - Desenvolvimento Java.](https://www.jetbrains.com/pt-br/idea/) 
+- [Postman - Simulação de Interface](https://www.postman.com/)
+- H2 - Banco de Dados. Console
+
+- Spring Boot. (Sem link de acesso)
+- JPA. (Sem link de acesso)
+- Lambdas. (Sem link de acesso)
+- JDBC. (Sem link de acesso)
+- JSON. (Sem link de acesso)
+- Swagger. (Sem link de acesso)
 
 ## DESAFIOS
 - [Desafio 1](https://github.com/ederntt/becaDesafiosEderRibeiro/edit/main/README.md)
