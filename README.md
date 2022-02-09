@@ -71,4 +71,9 @@ Fazer o tratamento das exception utilizando try catch , fazer o tratamento utili
 ## Diagrama
 
 <img width="569" alt="Captura de tela 2022-02-08 231439" src="https://user-images.githubusercontent.com/98030629/153112126-46038000-5cc2-4758-a749-cfb8ebb34cf7.png">
+ 
+ 
+IMPLEMENTAÇÃO DE CLASSES FEITAS NA MODELAGEM EM UM PACOTE.
+<img width="166" alt="primeira classeeee" src="https://user-images.githubusercontent.com/98030629/153267341-717e84d3-f332-46fb-b55a-83d73104fe43.png">
+
 
