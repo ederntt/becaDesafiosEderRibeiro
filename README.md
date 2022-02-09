@@ -4,14 +4,16 @@
 <img src="https://ik.imagekit.io/gzogywm8vya/banner_estacionamento_rqqeoyAahE.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1642687192657.png"
 </h1> 
 
-## Desafio 3 requeria:
-- Crie as classes de service na sua API;
-- Implementar interfaces e declara os metódos que irá ser utilizadas;
-- Faça a integração com a camada de controller;
 
 
 ## Curso
 - https://nttdatalearn.udemy.com/course/fundamentos-de-programacao-com-java/learn/lecture/5740792#overview
+    
+  ## Desafio 3 requeria:
+- Crie as classes de service na sua API;
+- Implementar interfaces e declara os metódos que irá ser utilizadas;
+- Faça a integração com a camada de controller;
+
 
 ## Tecnologias e ferramentas Utilizadas
 - [java](https://www.java.com/pt-BR/)
