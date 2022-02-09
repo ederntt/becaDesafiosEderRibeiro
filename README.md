@@ -10,7 +10,7 @@
 <br></br>
 ---
 
-## Curso feito com:
+## Curso
 - https://nttdatalearn.udemy.com/course/fundamentos-de-programacao-com-java/learn/lecture/5740792#overview
 
 ## Tecnologias e ferramentas Utilizadas
