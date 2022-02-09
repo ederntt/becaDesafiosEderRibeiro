@@ -36,9 +36,10 @@
     $yarn start
 ```
 ## Desafio 5 requeria:
-Adicione validações de dados na sua API;
-Adicione Mapper em sua aplicação para a conversão de objetos;
-Implementar Lombook em sua aplicação.
+Aplique os conceitos de DTO na sua aplicação;
+	Faça um relacionamento de tabelas na sua API;
+	Crie um novo end-point para retornar um DTO personalizado, agrupamento de várias informações em diferentes tabelas da sua base de dados;
+
 
 
 ## Diagrama
@@ -46,16 +47,7 @@ Implementar Lombook em sua aplicação.
 
 
 
+<img width="104" alt="Captura de tela 2022-02-08 235207" src="https://user-images.githubusercontent.com/98030629/153112973-0d30ff39-a89a-4de6-846c-9a267a1bb9d5.png">
 
 
-
-
-![image](https://user-images.githubusercontent.com/98030629/151431932-f99c8667-0041-4113-8241-370986f8b195.png)
-
-![image](https://user-images.githubusercontent.com/98030629/151431989-d38e23b2-d0cf-4f49-be7d-2d432cc03f62.png)
-
-![image](https://user-images.githubusercontent.com/98030629/151432197-075b909a-f0f7-48a3-a677-b7b6fe624179.png)
-
-![image](https://user-images.githubusercontent.com/98030629/151432264-9c0650d1-5eac-4187-8f62-ec84fcc4078a.png)
-
-![image](https://user-images.githubusercontent.com/98030629/151432357-4f7bf6a9-186c-423b-bdc5-dfd2296a50b4.png)
+<img width="493" alt="dtos" src="https://user-images.githubusercontent.com/98030629/153112975-645c0844-cf66-43b2-8929-d37c18378c0d.png">
