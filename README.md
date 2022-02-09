@@ -35,7 +35,7 @@
 #inciar o projeto
     $yarn start
 ```
-## DEsafio 5 requeria:
+## Desafio 5 requeria:
 Adicione validações de dados na sua API;
 Adicione Mapper em sua aplicação para a conversão de objetos;
 Implementar Lombook em sua aplicação.
