@@ -5,25 +5,22 @@
 </h1> 
 
 
----
----
-<br></br>
-<b>Estacionamento GranParking</b>
-<br></br>
----
-
-
 ## Tecnologia Utilizada
 - [java](https://www.java.com/pt-BR/)
 - [Spring boot](https://spring.io/projects/spring-boot)
 - [MySQL](https://www.mysql.com/products/workbench/)
+    
+## Desafio 6 requeria:
+Adicione validações de dados na sua API;
+Adicione Mapper em sua aplicação para a conversão de objetos;
+Implementar Lombook em sua aplicação.
 
-<br></br>
-<br></br>
-
----
-<br></br>
-<br></br>
+## DESAFIOS
+- [Desafio 1](https://github.com/ederntt/becaDesafiosEderRibeiro/edit/main/README.md)
+- [Desafio 2](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/novodesafio)
+- [Desafio 3](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/Desafio3_)
+- [Desafio 4](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/Desafio4)
+- [Desafio 5](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/Desafio5)
 
 ## Baixando o projeto
 
@@ -41,10 +38,6 @@
     $yarn start
 ```
 
-## Desafio 6 requeria:
-Adicione validações de dados na sua API;
-Adicione Mapper em sua aplicação para a conversão de objetos;
-Implementar Lombook em sua aplicação.
 
 
 
