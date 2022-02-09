@@ -10,11 +10,24 @@
 <br></br>
 ---
 
+## Curso feito com:
+- https://nttdatalearn.udemy.com/course/fundamentos-de-programacao-com-java/learn/lecture/5740792#overview
 
-## Tecnologia Utilizada
+## Tecnologias e ferramentas Utilizadas
 - [java](https://www.java.com/pt-BR/)
 - [Spring boot](https://spring.io/projects/spring-boot)
 - [MySQL](https://www.mysql.com/products/workbench/)
+- [Draw.io - Aplicar UML](https://drawio.bbva.com/)
+- [Intelij - Desenvolvimento Java.](https://www.jetbrains.com/pt-br/idea/) 
+- [Postman - Simulação de Interface](https://www.postman.com/)
+- H2 - Banco de Dados. Console
+
+Spring Boot.
+JPA.
+Lambdas.
+JDBC.
+JSON.
+Swagger.
 
 <br></br>
 <br></br>
