@@ -15,6 +15,8 @@
 - [MySQL](https://www.mysql.com/products/workbench/)
 
 <br></br>
+- [Desafio 1](https://github.com/ederntt/becaDesafiosEderRibeiro/edit/main/README.md)
+- [Desafio 2](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/novodesafio)
 <br></br>
 
 
