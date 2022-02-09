@@ -4,15 +4,6 @@
 <img src="https://ik.imagekit.io/gzogywm8vya/banner_estacionamento_rqqeoyAahE.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1642687192657.png"
 </h1> 
 
-
-
-## Indice
-- [Sobre](#-Sobre)
-- [Tecnologias utilizadas](#-Tecnologia-Utilizada)
-- [Como baixar o projeto](#-Baixando-o-projeto)
-- [Sobre o estacionamento](#-O-estacionamento-conta-com)
-
----
 ---
 <br></br>
 <b>Estacionamento GranParking</b>
