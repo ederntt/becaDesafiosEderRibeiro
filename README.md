@@ -49,3 +49,7 @@ Implementar interfaces e declara os metódos que irá ser utilizadas;
 IMAGEM RELACIONADA AO DESAFIO 3 DE SERVICES.
 
 ![image](https://user-images.githubusercontent.com/98030629/151987972-e772fb9e-0d5d-460e-a43f-1356e56fc186.png)
+
+ SEVICES E CAMADA CONTROLLER
+<img width="359" alt="service e camada controler" src="https://user-images.githubusercontent.com/98030629/153112514-4080977d-ad1c-4f12-a06f-24fe7c5e2e3e.png">
+
