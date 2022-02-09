@@ -5,15 +5,6 @@
 </h1> 
 
 
-
-## Indice
-- [Sobre](#-Sobre)
-- [Tecnologias utilizadas](#-Tecnologia-Utilizada)
-- [Como baixar o projeto](#-Baixando-o-projeto)
-- [Sobre o estacionamento](#-O-estacionamento-conta-com)
-
----
----
 <br></br>
 <b>Estacionamento GranParking</b>
 <br></br>
