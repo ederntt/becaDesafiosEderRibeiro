@@ -33,6 +33,11 @@
 #inciar o projeto
     $yarn start
 ```
+## Desafio 3 requeria:
+Crie as classes de service na sua API;
+Implementar interfaces e declara os metódos que irá ser utilizadas;
+	Faça a integração com a camada de controller;
+
 
 ## Diagrama
 
