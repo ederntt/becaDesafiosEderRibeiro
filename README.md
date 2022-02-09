@@ -4,24 +4,22 @@
 <img src="https://ik.imagekit.io/gzogywm8vya/banner_estacionamento_rqqeoyAahE.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1642687192657.png"
 </h1> 
 
----
----
-<br></br>
-<b>Estacionamento GranParking</b>
-<br></br>
----
-
-
-
-
 ## Tecnologia Utilizada
 - [java](https://www.java.com/pt-BR/)
 - [Spring boot](https://spring.io/projects/spring-boot)
 - [MySQL](https://www.mysql.com/products/workbench/)
 
-<br></br>
-<br></br>
+##DESAFIOS
+- [Desafio 1](https://github.com/ederntt/becaDesafiosEderRibeiro/edit/main/README.md)
+- [Desafio 2](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/novodesafio)
+- [Desafio 3](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/Desafio3_)
 
+	## desafio 4 requeria: 
+Crie as classes de repository na sua API;
+Configure o banco de dados H2 na sua Api
+(Use a configuração: spring.datasource.url=jdbc:h2:mem:testdb);
+	Implementar na camada service;
+	Faça os testes para certificar que sua base de dados está integrado.
 
 ## Baixando o projeto
 
@@ -38,13 +36,6 @@
 #inciar o projeto
     $yarn start
 ```
-## desafio 4 requeria: 
-Crie as classes de repository na sua API;
-Configure o banco de dados H2 na sua Api
-(Use a configuração: spring.datasource.url=jdbc:h2:mem:testdb);
-	Implementar na camada service;
-	Faça os testes para certificar que sua base de dados está integrado.
-
 
 
 ## Diagrama
