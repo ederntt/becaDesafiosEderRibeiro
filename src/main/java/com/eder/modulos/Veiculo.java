@@ -4,8 +4,6 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.validator.constraints.br.CPF;
-
 import javax.persistence.*;
 @Data
 @AllArgsConstructor
@@ -15,7 +13,7 @@ import javax.persistence.*;
 public class Veiculo  {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nomeMotorista;
     private String cpf;
@@ -24,8 +22,6 @@ public class Veiculo  {
     private String horaEntrada;
     private String horaSaida;
     private String pagamento;
-
-
     @ManyToOne
     private Estac estac;
 

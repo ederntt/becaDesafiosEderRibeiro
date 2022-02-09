@@ -4,9 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
-import java.time.LocalDate;
 import java.util.List;
 
 @Data
@@ -23,9 +21,7 @@ public class Estac {
     private Double faturamentoGeral;
     private String data;
 
-
     @OneToMany(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "estac")
     @JsonIgnore
     private List<Veiculo> veiculos;
 

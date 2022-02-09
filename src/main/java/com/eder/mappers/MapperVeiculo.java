@@ -3,9 +3,9 @@ package com.eder.mappers;
 import com.eder.dtos.DtosVeiculo;
 import com.eder.modulos.Veiculo;
 import org.mapstruct.Mapper;
-
 import java.util.List;
-@Mapper(componentModel = "spring")
+
+@Mapper
 public interface MapperVeiculo {
 
         List<DtosVeiculo> veiculoToDtoVeiculo (List<Veiculo> veiculo);

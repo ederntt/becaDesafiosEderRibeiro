@@ -1,7 +1,6 @@
 package com.eder.nterface;
 
 import com.eder.modulos.Veiculo;
-
 import java.util.List;
 
 public interface InterfaceVeiculo {

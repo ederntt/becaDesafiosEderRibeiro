@@ -1,7 +1,6 @@
 package com.eder.nterface;
 
 import com.eder.modulos.Estac;
-
 import java.util.List;
 
 public interface InterfaceEstacionamento {

@@ -18,44 +18,30 @@ import java.util.List;
 public class VeiculoService implements InterfaceVeiculo {
 
     private final RepositoryVeiculo repositoryVeiculo;
-//
-//    public Veiculo criar(@NotNull Veiculo veiculo) {
-//
-////        if (veiculo.getPlacaCarro().length() <= 4) {
-////            throw new RuntimeException("Dados da placa nao podem ser menores que 4 caracteres");
-////        }
-//
-//        Veiculo Veiculo = new Veiculo();
-//        veiculo.setModelo(veiculo.getModelo());
-//        veiculo.setPlacaCarro(veiculo.getPlacaCarro());
-//        veiculo.setHoraEntrada(veiculo.getHoraEntrada());
-//        veiculo.setHoraSaida(veiculo.getHoraSaida());
-//        veiculo.setPagamento(veiculo.getPagamento());
-//
-//        return repositoryVeiculo.save(veiculo);
-//
-//    }
-
-//    @Override // metodo criado para funcionar implements
-//    public DtosVeiculo criar(DtosVeiculo dtosVeiculo) {
-//        return null;
-//    }
 
     @Override
     public Veiculo criar(Veiculo Veiculo) {
+
         Veiculo veiculo = new Veiculo();
         veiculo.setPlacaCarro(veiculo.getPlacaCarro());
+        if (Veiculo.getPlacaCarro() == null) {
+            throw new TratamentoErros("placa do carro nao pode ser menor que 4 caracteres");
+        }
         veiculo.setModelo(veiculo.getModelo());
         veiculo.setHoraEntrada(veiculo.getHoraEntrada());
         veiculo.setHoraSaida(veiculo.getHoraSaida());
         veiculo.setPagamento(veiculo.getPagamento());
 
-        Veiculo veiculoCriado  = repositoryVeiculo.save(veiculo);
+        Veiculo veiculoCriado = repositoryVeiculo.save(veiculo);
+        if (veiculoCriado == null) {
+            throw new TratamentoErros("invalido");
+        }
         return veiculo;
     }
 
     @Override
     public Veiculo atualizar(Veiculo veiculo, Long id) {
+
         Veiculo modificar = this.obter(id);
         modificar.setCpf(veiculo.getCpf());
         modificar.setModelo(veiculo.getModelo());
