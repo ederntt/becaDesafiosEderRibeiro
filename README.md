@@ -38,6 +38,14 @@
 #inciar o projeto
     $yarn start
 ```
+## desafio 4 requeria: 
+Crie as classes de repository na sua API;
+Configure o banco de dados H2 na sua Api
+(Use a configuração: spring.datasource.url=jdbc:h2:mem:testdb);
+	Implementar na camada service;
+	Faça os testes para certificar que sua base de dados está integrado.
+
+
 
 ## Diagrama
 <img width="569" alt="Captura de tela 2022-02-08 231439" src="https://user-images.githubusercontent.com/98030629/153108995-a1dda8d0-227d-444d-959b-438a838ed661.png">
