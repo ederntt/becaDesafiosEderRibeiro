@@ -4,21 +4,24 @@
 <img src="https://ik.imagekit.io/gzogywm8vya/banner_estacionamento_rqqeoyAahE.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1642687192657.png"
 </h1> 
 
----
-<br></br>
-<b>Estacionamento GranParking</b>
-<br></br>
----
 
 
 ## Tecnologia Utilizada
 - [java](https://www.java.com/pt-BR/)
 - [Spring boot](https://spring.io/projects/spring-boot)
 - [MySQL](https://www.mysql.com/products/workbench/)
+	
+## DESAFIOS
+- [Desafio 1](https://github.com/ederntt/becaDesafiosEderRibeiro/edit/main/README.md)
+- [Desafio 2](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/novodesafio)
+- [Desafio 3](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/Desafio3_)
+- [Desafio 4](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/Desafio4)
+	
 
-<br></br>
-<br></br>
-
+## Desafio 5 requeria:
+Aplique os conceitos de DTO na sua aplicação;
+	Faça um relacionamento de tabelas na sua API;
+	Crie um novo end-point para retornar um DTO personalizado, agrupamento de várias informações em diferentes tabelas da sua base de dados;
 
 ## Baixando o projeto
 
@@ -35,10 +38,6 @@
 #inciar o projeto
     $yarn start
 ```
-## Desafio 5 requeria:
-Aplique os conceitos de DTO na sua aplicação;
-	Faça um relacionamento de tabelas na sua API;
-	Crie um novo end-point para retornar um DTO personalizado, agrupamento de várias informações em diferentes tabelas da sua base de dados;
 
 
 
