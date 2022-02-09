@@ -38,7 +38,8 @@
 ```
 
 ## Diagrama
-![image](https://user-images.githubusercontent.com/98030629/151240822-21ffd407-97d8-464d-aef0-abbc4e63be7c.png)
+
+<img width="569" alt="Captura de tela 2022-02-08 231439" src="https://user-images.githubusercontent.com/98030629/153112126-46038000-5cc2-4758-a749-cfb8ebb34cf7.png">
 
 
 ![image](https://user-images.githubusercontent.com/98030629/151431932-f99c8667-0041-4113-8241-370986f8b195.png)
