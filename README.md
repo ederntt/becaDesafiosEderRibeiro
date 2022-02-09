@@ -35,6 +35,11 @@
 #inciar o projeto
     $yarn start
 ```
+## DEsafio 5 requeria:
+Adicione validações de dados na sua API;
+Adicione Mapper em sua aplicação para a conversão de objetos;
+Implementar Lombook em sua aplicação.
+
 
 ## Diagrama
 <img width="569" alt="Captura de tela 2022-02-08 231439" src="https://user-images.githubusercontent.com/98030629/153108995-a1dda8d0-227d-444d-959b-438a838ed661.png">
@@ -42,7 +47,7 @@
 
 
 
-IMAGEM RELACIONADA AO DESAFIO 2. CLASSES DE CONTROLLER e IMPLEMENTAÇÃO DE RESPONSE ENTITY
+
 
 
 ![image](https://user-images.githubusercontent.com/98030629/151431932-f99c8667-0041-4113-8241-370986f8b195.png)
