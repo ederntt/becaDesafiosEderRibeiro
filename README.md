@@ -4,7 +4,7 @@
 <img src="https://ik.imagekit.io/gzogywm8vya/banner_estacionamento_rqqeoyAahE.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1642687192657.png"
 </h1> 
 
-## Porojeto simples de estacionamento, tendo como classes principais o Estacioanamento e o Veiculo.
+## Porojeto simples de estacionamento, tendo como classes principais o Estacionamento e o Veiculo.
 
 ## Curso
 - https://nttdatalearn.udemy.com/course/fundamentos-de-programacao-com-java/learn/lecture/5740792#overview
