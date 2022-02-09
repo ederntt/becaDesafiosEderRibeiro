@@ -4,15 +4,6 @@
 <img src="https://ik.imagekit.io/gzogywm8vya/banner_estacionamento_rqqeoyAahE.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1642687192657.png"
 </h1> 
 
-
-
-## Indice
-- [Sobre](#-Sobre)
-- [Tecnologias utilizadas](#-Tecnologia-Utilizada)
-- [Como baixar o projeto](#-Baixando-o-projeto)
-- [Sobre o estacionamento](#-O-estacionamento-conta-com)
-
----
 ---
 <br></br>
 <b>Estacionamento GranParking</b>
@@ -35,17 +26,6 @@ O projeto **Estacionamento GranParking** conta com sistema de vagas mensais, hor
 <br></br>
 
 
-**O estacionamento conta com:**
-- Segurança 24 horas
-- Câmeras de monitoramento
-- Convênio
-- Duchas automatizadas
-- Funcionarios Capacitados
-- Motorista de Estacionamento
-
----
-<br></br>
-<br></br>
 
 ## Baixando o projeto
 
@@ -65,10 +45,6 @@ O projeto **Estacionamento GranParking** conta com sistema de vagas mensais, hor
 
 ## Diagrama
 ![image](https://user-images.githubusercontent.com/98030629/151240822-21ffd407-97d8-464d-aef0-abbc4e63be7c.png)
-
-
-
-IMAGEM RELACIONADA AO DESAFIO 2. CLASSES DE CONTROLLER e IMPLEMENTAÇÃO DE RESPONSE ENTITY
 
 
 ![image](https://user-images.githubusercontent.com/98030629/151431932-f99c8667-0041-4113-8241-370986f8b195.png)
