@@ -8,13 +8,30 @@
 <br></br>
 <b>DESAFIOS</b>
 Desafio 2 (Pagina Atual)
----
+## desafio 2 Requeria:
+Crie as classes de controllers na sua API (CRUD);
+Implementar o OpenAPI na sua Spring Rest API;
+Implementar ResponseEntity nos retornos das suas chamadas.
 
 
-## Tecnologia Utilizada
+## Curso
+- https://nttdatalearn.udemy.com/course/fundamentos-de-programacao-com-java/learn/lecture/5740792#overview
+
+## Tecnologias e ferramentas Utilizadas
 - [java](https://www.java.com/pt-BR/)
 - [Spring boot](https://spring.io/projects/spring-boot)
 - [MySQL](https://www.mysql.com/products/workbench/)
+- [Draw.io - Aplicar UML](https://drawio.bbva.com/)
+- [Intelij - Desenvolvimento Java.](https://www.jetbrains.com/pt-br/idea/) 
+- [Postman - Simulação de Interface](https://www.postman.com/)
+- H2 - Banco de Dados. Console
+
+- Spring Boot. (Sem link de acesso)
+- JPA. (Sem link de acesso)
+- Lambdas. (Sem link de acesso)
+- JDBC. (Sem link de acesso)
+- JSON. (Sem link de acesso)
+- Swagger. (Sem link de acesso)
 
 ## Baixando o projeto
 
@@ -31,10 +48,6 @@ Desafio 2 (Pagina Atual)
 #inciar o projeto
     $yarn start
 ```
-## desafio 2 Requeria:
-Crie as classes de controllers na sua API (CRUD);
-Implementar o OpenAPI na sua Spring Rest API;
-	Implementar ResponseEntity nos retornos das suas chamadas.
 
 
 
