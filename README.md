@@ -5,8 +5,7 @@
 </h1> 
 
 ---
-<br></br>
-<b>DESAFIOS</b>
+
 Desafio 2 (Pagina Atual)
 
 ## Curso ✍
