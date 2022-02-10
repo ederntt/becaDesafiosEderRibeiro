@@ -8,9 +8,9 @@
 -[Curso de Java- Udemy](https://nttdatalearn.udemy.com/course/fundamentos-de-programacao-com-java/learn/lecture/5740792#overview)
 	
 ## Desafio 5 requeria: 🤖
--Aplique os conceitos de DTO na sua aplicação;
--Faça um relacionamento de tabelas na sua API;
--Crie um novo end-point para retornar um DTO personalizado, agrupamento de várias informações em diferentes tabelas da sua base de dados;
+- Aplique os conceitos de DTO na sua aplicação;
+- Faça um relacionamento de tabelas na sua API;
+- Crie um novo end-point para retornar um DTO personalizado, agrupamento de várias informações em diferentes tabelas da sua base de dados;
 	
 ## Desafios Anteriores ✔
 - [Desafio 1](https://github.com/ederntt/becaDesafiosEderRibeiro/edit/main/README.md)
