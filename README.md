@@ -7,23 +7,23 @@
 
 	
 
-## Curso
-- https://nttdatalearn.udemy.com/course/fundamentos-de-programacao-com-java/learn/lecture/5740792#overview
+## Curso Utilizado para o projeto ✍
+-[Curso de Java- Udemy](https://nttdatalearn.udemy.com/course/fundamentos-de-programacao-com-java/learn/lecture/5740792#overview)
 	
-## desafio 4 requeria: 
+## desafio 4 requeria: 🤖
 - Crie as classes de repository na sua API;
 - Configure o banco de dados H2 na sua Api
 - (Use a configuração: spring.datasource.url=jdbc:h2:mem:testdb);
 - Implementar na camada service;
 - Faça os testes para certificar que sua base de dados está integrado.
 	
-## Desafios Anteriores
+## Desafios Anteriores ✔
 - [Desafio 1](https://github.com/ederntt/becaDesafiosEderRibeiro/edit/main/README.md)
 - [Desafio 2](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/novodesafio)
 - [Desafio 3](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/Desafio3_)
 
 
-## Tecnologias e ferramentas Utilizadas
+## Tecnologias e ferramentas Utilizadas ⚙
 - [java](https://www.java.com/pt-BR/)
 - [Spring boot](https://spring.io/projects/spring-boot)
 - [MySQL](https://www.mysql.com/products/workbench/)
@@ -41,7 +41,7 @@
 
 
 
-## Baixando o projeto
+## Baixando o projeto 🖱
 
 ```bash
 #clonar repositorio
