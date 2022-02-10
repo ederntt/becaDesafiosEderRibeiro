@@ -20,26 +20,9 @@ public class VeiculoService implements InterfaceVeiculo {
     private final RepositoryVeiculo repositoryVeiculo;
     private final MapperVeiculo mapperVeiculo;
 
-
     @Override
-    public Veiculo criar(Veiculo veiculo) {
-//        Veiculo veiculo1 = new Veiculo();
-//        veiculo1.setPlacaCarro(veiculo.getPlacaCarro());
-//        veiculo1.setModelo(veiculo.getModelo());
-//        veiculo1.setHoraEntrada(veiculo.getHoraEntrada());
-//        veiculo1.setHoraSaida(veiculo.getHoraSaida());
-//        veiculo1.setPagamento(veiculo.getPagamento());
-
-       // Veiculo veiculoCriado =
-               return repositoryVeiculo.save(veiculo);
-
-       // return veiculoCriado;
-    }
-
-    @Override
-    public DtosVeiculo criar(DtosVeiculo dtosVeiculo) {
-        DtosVeiculo dtosVeiculo1 = new DtosVeiculo();
-        return dtosVeiculo1;
+    public Veiculo criar(DtosVeiculo dtosVeiculo) {
+        return repositoryVeiculo.save(mapperVeiculo.veiculoToDtoVeiculo(dtosVeiculo));
     }
 
     @Override
@@ -71,9 +54,9 @@ public class VeiculoService implements InterfaceVeiculo {
 
         Veiculo veiculo = repositoryVeiculo.findById(id).get();
         if (veiculo == null) {
-            throw new RuntimeException(" opção indisponivel");
+            throw new TratamentoErros(" opção indisponivel");
         }
         return repositoryVeiculo.findById(id)
-                .orElseThrow(RuntimeException::new);
+                .orElseThrow(TratamentoErros::new);
     }
 }

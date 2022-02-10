@@ -15,11 +15,9 @@ import javax.validation.constraints.Size;
 public class DtosVeiculo{
 
     private String modelo;
-    @Size (min = 7, message = "A placa deve conter no minimo 7 caracteres")
+    @Size (min = 7, max = 7, message = "A placa deve conter no minimo 7 caracteres")
     private String placaCarro;
     private String horaEntrada;
     private String horaSaida;
-
-    @Size (min = 4, message = "Aceitar somente: dinheiro, cartão Debito ou credito")
     private String Pagamento;
 }

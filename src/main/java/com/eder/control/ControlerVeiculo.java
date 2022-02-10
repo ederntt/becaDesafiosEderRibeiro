@@ -1,6 +1,7 @@
 package com.eder.control;
 
 import com.eder.dtos.DtosVeiculo;
+import com.eder.mappers.MapperVeiculo;
 import com.eder.modulos.Veiculo;
 import com.eder.services.VeiculoService;
 import lombok.RequiredArgsConstructor;
@@ -16,14 +17,14 @@ import java.util.List;
 public class ControlerVeiculo extends DtosVeiculo {
 
     private final VeiculoService veiculoService;
-    private DtosVeiculo dtosVeiculo;
+    private MapperVeiculo mapperVeiculo;
 
     @PostMapping
-    public ResponseEntity<DtosVeiculo> criar(@RequestBody DtosVeiculo dtosVeiculo){ // dtos
+    public ResponseEntity<Veiculo> criar(@RequestBody @Valid DtosVeiculo dto){ // dtos
 
-        DtosVeiculo dtosVeiculo1 = veiculoService.criar(dtosVeiculo);
+        Veiculo veiculo1 = veiculoService.criar(dto);
 
-        return ResponseEntity.created(null).body(dtosVeiculo1);
+        return ResponseEntity.created(null).body(veiculo1);
     }
 
     @PatchMapping("/{id}")
@@ -40,7 +41,6 @@ public class ControlerVeiculo extends DtosVeiculo {
 
         return ResponseEntity.noContent().build();
     }
-
 
     @GetMapping("/{id}")
     public ResponseEntity<Veiculo> obter(@PathVariable Long id) {

@@ -19,5 +19,4 @@ public interface InterfaceVeiculo {
 
     List<Veiculo> listar();
 
-
 }

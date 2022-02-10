@@ -20,7 +20,9 @@ public class EstacionamentoServices implements InterfaceEstacionamento {
 
     @Override
     public Estac criar(Estac estac) {
-        return repositoryEstac.save(estac);
+        if (estac == null) {
+            throw new TratamentoErros(" opção indisponivel");
+        }  return repositoryEstac.save(estac);
     }
 
     public Estac atualizar(Estac estac, Long id) {
