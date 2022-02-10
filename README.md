@@ -8,14 +8,16 @@
 <br></br>
 <b>DESAFIOS</b>
 Desafio 2 (Pagina Atual)
+
+## Curso
+- https://nttdatalearn.udemy.com/course/fundamentos-de-programacao-com-java/learn/lecture/5740792#overview
+
+
 ## desafio 2 Requeria:
 Crie as classes de controllers na sua API (CRUD);
 Implementar o OpenAPI na sua Spring Rest API;
 Implementar ResponseEntity nos retornos das suas chamadas.
 
-
-## Curso
-- https://nttdatalearn.udemy.com/course/fundamentos-de-programacao-com-java/learn/lecture/5740792#overview
 
 ## Tecnologias e ferramentas Utilizadas
 - [java](https://www.java.com/pt-BR/)
@@ -24,8 +26,8 @@ Implementar ResponseEntity nos retornos das suas chamadas.
 - [Draw.io - Aplicar UML](https://drawio.bbva.com/)
 - [Intelij - Desenvolvimento Java.](https://www.jetbrains.com/pt-br/idea/) 
 - [Postman - Simulação de Interface](https://www.postman.com/)
-- H2 - Banco de Dados. Console
 
+- H2 - Banco de Dados. Console
 - Spring Boot. (Sem link de acesso)
 - JPA. (Sem link de acesso)
 - Lambdas. (Sem link de acesso)
@@ -52,7 +54,7 @@ Implementar ResponseEntity nos retornos das suas chamadas.
 
 
 
-## Diagrama
+# Diagrama do projeto
 <img width="569" alt="Captura de tela 2022-02-08 231439" src="https://user-images.githubusercontent.com/98030629/153108995-a1dda8d0-227d-444d-959b-438a838ed661.png">
 
 
