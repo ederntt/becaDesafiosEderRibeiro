@@ -6,20 +6,20 @@
 
 
 
-## Curso
+## Curso ✍
 - https://nttdatalearn.udemy.com/course/fundamentos-de-programacao-com-java/learn/lecture/5740792#overview
     
-  ## Desafio 3 requeria:
+  ## Desafio 3 requeria: 🤖
 - Crie as classes de service na sua API;
 - Implementar interfaces e declara os metódos que irá ser utilizadas;
 - Faça a integração com a camada de controller;
     
-  ## Desafios Anteriores:
+  ## Desafios Anteriores: ✔
 - [Desafio 1](https://github.com/ederntt/becaDesafiosEderRibeiro/edit/main/README.md)
 - [Desafio 2](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/novodesafio)
 
 
-## Tecnologias e ferramentas Utilizadas
+## Tecnologias e ferramentas Utilizadas ⚙
 - [java](https://www.java.com/pt-BR/)
 - [Spring boot](https://spring.io/projects/spring-boot)
 - [MySQL](https://www.mysql.com/products/workbench/)
@@ -36,7 +36,7 @@
 - Swagger. (Sem link de acesso)
 
 
-## Baixando o projeto
+## Baixando o projeto 🖱
 
 ```bash
 #clonar repositorio
