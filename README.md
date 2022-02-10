@@ -11,6 +11,13 @@
 Adicione validações de dados na sua API;
 Adicione Mapper em sua aplicação para a conversão de objetos;
 Implementar Lombook em sua aplicação.
+    
+## Desafios Anteriores ✔
+- [Desafio 1](https://github.com/ederntt/becaDesafiosEderRibeiro/edit/main/README.md)
+- [Desafio 2](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/novodesafio)
+- [Desafio 3](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/Desafio3_)
+- [Desafio 4](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/Desafio4)
+- [Desafio 5](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/Desafio5)
 
 
 ## Tecnologias e ferramentas Utilizadas ⚙
@@ -28,14 +35,6 @@ Implementar Lombook em sua aplicação.
 - JDBC. (Sem link de acesso)
 - JSON. (Sem link de acesso)
 - Swagger. (Sem link de acesso)
-
-
-## Desafios Anteriores ✔
-- [Desafio 1](https://github.com/ederntt/becaDesafiosEderRibeiro/edit/main/README.md)
-- [Desafio 2](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/novodesafio)
-- [Desafio 3](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/Desafio3_)
-- [Desafio 4](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/Desafio4)
-- [Desafio 5](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/Desafio5)
 
 ## Baixando o projeto 🖱
 
