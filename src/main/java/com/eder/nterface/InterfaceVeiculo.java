@@ -1,10 +1,13 @@
 package com.eder.nterface;
 
+import com.eder.dtos.DtosVeiculo;
 import com.eder.modulos.Veiculo;
 
 import java.util.List;
 
 public interface InterfaceVeiculo {
+
+    DtosVeiculo criar(DtosVeiculo dtosVeiculo);
 
     public Veiculo criar(Veiculo veiculo);
 

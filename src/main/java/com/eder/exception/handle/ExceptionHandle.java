@@ -15,7 +15,6 @@ public class ExceptionHandle {
     public ResponseEntity<Padrao> Erro(TratamentoErros t) {
         Padrao padrao = new Padrao();
         padrao.setMensagem(t.getMessage());
-        padrao.setDataH(LocalDateTime.now());
         padrao.setCodigo(HttpStatus.NOT_ACCEPTABLE.value());
 
         return ResponseEntity.status(padrao.getCodigo()).body(padrao);

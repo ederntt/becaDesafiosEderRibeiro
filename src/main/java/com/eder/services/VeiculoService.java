@@ -1,6 +1,8 @@
 package com.eder.services;
 
+import com.eder.dtos.DtosVeiculo;
 import com.eder.exception.TratamentoErros;
+import com.eder.mappers.MapperVeiculo;
 import com.eder.modulos.Veiculo;
 import com.eder.nterface.InterfaceVeiculo;
 import com.eder.repository.RepositoryVeiculo;
@@ -16,40 +18,28 @@ import java.util.List;
 public class VeiculoService implements InterfaceVeiculo {
 
     private final RepositoryVeiculo repositoryVeiculo;
-//
-//    public Veiculo criar(@NotNull Veiculo veiculo) {
-//
-////        if (veiculo.getPlacaCarro().length() <= 4) {
-////            throw new RuntimeException("Dados da placa nao podem ser menores que 4 caracteres");
-////        }
-//
-//        Veiculo Veiculo = new Veiculo();
-//        veiculo.setModelo(veiculo.getModelo());
-//        veiculo.setPlacaCarro(veiculo.getPlacaCarro());
-//        veiculo.setHoraEntrada(veiculo.getHoraEntrada());
-//        veiculo.setHoraSaida(veiculo.getHoraSaida());
-//        veiculo.setPagamento(veiculo.getPagamento());
-//
-//        return repositoryVeiculo.save(veiculo);
-//
-//    }
+    private final MapperVeiculo mapperVeiculo;
 
-//    @Override // metodo criado para funcionar implements
-//    public DtosVeiculo criar(DtosVeiculo dtosVeiculo) {
-//        return null;
-//    }
 
     @Override
-    public Veiculo criar(Veiculo Veiculo) {
-        Veiculo veiculo = new Veiculo();
-        veiculo.setPlacaCarro(veiculo.getPlacaCarro());
-        veiculo.setModelo(veiculo.getModelo());
-        veiculo.setHoraEntrada(veiculo.getHoraEntrada());
-        veiculo.setHoraSaida(veiculo.getHoraSaida());
-        veiculo.setPagamento(veiculo.getPagamento());
+    public Veiculo criar(Veiculo veiculo) {
+//        Veiculo veiculo1 = new Veiculo();
+//        veiculo1.setPlacaCarro(veiculo.getPlacaCarro());
+//        veiculo1.setModelo(veiculo.getModelo());
+//        veiculo1.setHoraEntrada(veiculo.getHoraEntrada());
+//        veiculo1.setHoraSaida(veiculo.getHoraSaida());
+//        veiculo1.setPagamento(veiculo.getPagamento());
 
-        Veiculo veiculoCriado  = repositoryVeiculo.save(veiculo);
-        return veiculo;
+       // Veiculo veiculoCriado =
+               return repositoryVeiculo.save(veiculo);
+
+       // return veiculoCriado;
+    }
+
+    @Override
+    public DtosVeiculo criar(DtosVeiculo dtosVeiculo) {
+        DtosVeiculo dtosVeiculo1 = new DtosVeiculo();
+        return dtosVeiculo1;
     }
 
     @Override
@@ -62,14 +52,18 @@ public class VeiculoService implements InterfaceVeiculo {
         modificar.setHoraEntrada(veiculo.getHoraEntrada());
         modificar.setHoraSaida(veiculo.getHoraSaida());
         modificar.setPagamento(veiculo.getPagamento());
-
         repositoryVeiculo.save(modificar);
+
         return modificar;
     }
 
     public void deletar(Long id) {
         repositoryVeiculo.deleteById(id);
 
+    }
+
+    public List<Veiculo> listar() {
+        return repositoryVeiculo.findAll();
     }
 
     public Veiculo obter(Long id) {
@@ -80,14 +74,5 @@ public class VeiculoService implements InterfaceVeiculo {
         }
         return repositoryVeiculo.findById(id)
                 .orElseThrow(RuntimeException::new);
-    }
-
-    public List<Veiculo> listar() {
-        List<Veiculo> listarVeiculo = repositoryVeiculo.findAll();
-
-        if (listarVeiculo == null) {
-            throw new TratamentoErros(" opção indisponivel");
-        }
-        return listarVeiculo;
     }
 }

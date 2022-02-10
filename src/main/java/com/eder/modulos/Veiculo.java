@@ -11,7 +11,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Veiculo extends DtosVeiculo {
+public class Veiculo  {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)

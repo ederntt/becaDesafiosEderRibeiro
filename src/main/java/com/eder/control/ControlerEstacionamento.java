@@ -1,6 +1,6 @@
 package com.eder.control;
 
-
+import com.eder.dtos.DtosEstacionamento;
 import com.eder.modulos.Estac;
 import com.eder.services.EstacionamentoServices;
 import lombok.RequiredArgsConstructor;
@@ -16,6 +16,7 @@ public class ControlerEstacionamento {
 
 
     private final EstacionamentoServices estacionamentoServices;
+    private DtosEstacionamento dtosEstacionamento;
 
     @PostMapping
     public ResponseEntity<Estac> criar(@RequestBody Estac estac) {
