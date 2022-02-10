@@ -13,6 +13,10 @@
 - Crie as classes de service na sua API;
 - Implementar interfaces e declara os metódos que irá ser utilizadas;
 - Faça a integração com a camada de controller;
+    
+  ## Desafios Anteriores:
+- [Desafio 1](https://github.com/ederntt/becaDesafiosEderRibeiro/edit/main/README.md)
+- [Desafio 2](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/novodesafio)
 
 
 ## Tecnologias e ferramentas Utilizadas
@@ -30,10 +34,6 @@
 - JDBC. (Sem link de acesso)
 - JSON. (Sem link de acesso)
 - Swagger. (Sem link de acesso)
-
-## Desafios Anteriores:
-- [Desafio 1](https://github.com/ederntt/becaDesafiosEderRibeiro/edit/main/README.md)
-- [Desafio 2](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/novodesafio)
 
 
 ## Baixando o projeto
