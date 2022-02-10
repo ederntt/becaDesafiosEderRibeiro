@@ -20,7 +20,7 @@
 - [Desafio 3](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/Desafio3_)
 - [Desafio 4](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/Desafio4)
 
-## Tecnologias e ferramentas Utilizadas
+## Tecnologias e ferramentas Utilizadas ⚙
 - [java](https://www.java.com/pt-BR/)
 - [Spring boot](https://spring.io/projects/spring-boot)
 - [MySQL](https://www.mysql.com/products/workbench/)
