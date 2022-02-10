@@ -6,10 +6,11 @@
 
 
 
-## Curso ✍
-- https://nttdatalearn.udemy.com/course/fundamentos-de-programacao-com-java/learn/lecture/5740792#overview
+## Curso Utilizado para o projeto ✍
+-[Curso de Java- Udemy](https://nttdatalearn.udemy.com/course/fundamentos-de-programacao-com-java/learn/lecture/5740792#overview)
     
-  ## Desafio 3 requeria: 🤖
+    
+## Desafio 3 requeria: 🤖
 - Crie as classes de service na sua API;
 - Implementar interfaces e declara os metódos que irá ser utilizadas;
 - Faça a integração com a camada de controller;
