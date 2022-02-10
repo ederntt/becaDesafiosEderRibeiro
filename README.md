@@ -8,9 +8,9 @@
 -[Curso de Java- Udemy](https://nttdatalearn.udemy.com/course/fundamentos-de-programacao-com-java/learn/lecture/5740792#overview)
     
 ## Desafio 6 requeria 🤖
-Adicione validações de dados na sua API;
-Adicione Mapper em sua aplicação para a conversão de objetos;
-Implementar Lombook em sua aplicação.
+- Adicione validações de dados na sua API;
+- Adicione Mapper em sua aplicação para a conversão de objetos;
+- Implementar Lombook em sua aplicação.
     
 ## Desafios Anteriores ✔
 - [Desafio 1](https://github.com/ederntt/becaDesafiosEderRibeiro/edit/main/README.md)
