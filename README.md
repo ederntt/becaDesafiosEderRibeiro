@@ -60,7 +60,7 @@
 <img width="569" alt="Captura de tela 2022-02-08 231439" src="https://user-images.githubusercontent.com/98030629/153108995-a1dda8d0-227d-444d-959b-438a838ed661.png">
 
 
-
+# CLASSE DTOS
 <img width="104" alt="Captura de tela 2022-02-08 235207" src="https://user-images.githubusercontent.com/98030629/153112973-0d30ff39-a89a-4de6-846c-9a267a1bb9d5.png">
 
 
