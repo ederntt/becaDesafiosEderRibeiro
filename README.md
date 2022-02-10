@@ -4,16 +4,16 @@
 <img src="https://ik.imagekit.io/gzogywm8vya/banner_estacionamento_rqqeoyAahE.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1642687192657.png"
 </h1> 
     
-## Curso
-- https://nttdatalearn.udemy.com/course/fundamentos-de-programacao-com-java/learn/lecture/5740792#overview
+## Curso Utilizado para o projeto ✍
+-[Curso de Java- Udemy](https://nttdatalearn.udemy.com/course/fundamentos-de-programacao-com-java/learn/lecture/5740792#overview)
     
-## Desafio 6 requeria:
+## Desafio 6 requeria 🤖
 Adicione validações de dados na sua API;
 Adicione Mapper em sua aplicação para a conversão de objetos;
 Implementar Lombook em sua aplicação.
 
 
-## Tecnologias e ferramentas Utilizadas
+## Tecnologias e ferramentas Utilizadas ⚙
 - [java](https://www.java.com/pt-BR/)
 - [Spring boot](https://spring.io/projects/spring-boot)
 - [MySQL](https://www.mysql.com/products/workbench/)
@@ -30,14 +30,14 @@ Implementar Lombook em sua aplicação.
 - Swagger. (Sem link de acesso)
 
 
-## DESAFIOS
+## Desafios Anteriores ✔
 - [Desafio 1](https://github.com/ederntt/becaDesafiosEderRibeiro/edit/main/README.md)
 - [Desafio 2](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/novodesafio)
 - [Desafio 3](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/Desafio3_)
 - [Desafio 4](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/Desafio4)
 - [Desafio 5](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/Desafio5)
 
-## Baixando o projeto
+## Baixando o projeto 🖱
 
 ```bash
 #clonar repositorio
