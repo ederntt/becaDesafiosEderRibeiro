@@ -33,11 +33,10 @@
 - JSON. (Sem link de acesso)
 - Swagger. (Sem link de acesso)
 
-## DESAFIOS
+## Desafios Anteriores
 - [Desafio 1](https://github.com/ederntt/becaDesafiosEderRibeiro/edit/main/README.md)
 - [Desafio 2](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/novodesafio)
 - [Desafio 3](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/Desafio3_)
-
 
 
 ## Baixando o projeto
