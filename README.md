@@ -6,8 +6,8 @@
 
 ## Projeto simples de estacionamento, tendo como classes principais o Estacionamento e o Veiculo.
 
-## Curso ✍
-- https://nttdatalearn.udemy.com/course/fundamentos-de-programacao-com-java/learn/lecture/5740792#overview
+## Curso Utilizado para o projeto ✍
+-[Curso de Java- Udemy](https://nttdatalearn.udemy.com/course/fundamentos-de-programacao-com-java/learn/lecture/5740792#overview)
  
  ## Desafios ✔
 - [Desafio 1](https://github.com/ederntt/becaDesafiosEderRibeiro/edit/main/README.md)
