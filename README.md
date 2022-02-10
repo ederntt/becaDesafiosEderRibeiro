@@ -16,6 +16,12 @@
 - (Use a configuração: spring.datasource.url=jdbc:h2:mem:testdb);
 - Implementar na camada service;
 - Faça os testes para certificar que sua base de dados está integrado.
+	
+## Desafios Anteriores
+- [Desafio 1](https://github.com/ederntt/becaDesafiosEderRibeiro/edit/main/README.md)
+- [Desafio 2](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/novodesafio)
+- [Desafio 3](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/Desafio3_)
+
 
 ## Tecnologias e ferramentas Utilizadas
 - [java](https://www.java.com/pt-BR/)
@@ -33,10 +39,6 @@
 - JSON. (Sem link de acesso)
 - Swagger. (Sem link de acesso)
 
-## Desafios Anteriores
-- [Desafio 1](https://github.com/ederntt/becaDesafiosEderRibeiro/edit/main/README.md)
-- [Desafio 2](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/novodesafio)
-- [Desafio 3](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/Desafio3_)
 
 
 ## Baixando o projeto
