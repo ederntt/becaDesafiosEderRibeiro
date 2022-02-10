@@ -6,13 +6,19 @@
 
 
 
-## Curso
+## Curso ✍
 - https://nttdatalearn.udemy.com/course/fundamentos-de-programacao-com-java/learn/lecture/5740792#overview
 	
-## Desafio 5 requeria:
-Aplique os conceitos de DTO na sua aplicação;
-	Faça um relacionamento de tabelas na sua API;
-	Crie um novo end-point para retornar um DTO personalizado, agrupamento de várias informações em diferentes tabelas da sua base de dados;
+## Desafio 5 requeria: 🤖
+-Aplique os conceitos de DTO na sua aplicação;
+-Faça um relacionamento de tabelas na sua API;
+-Crie um novo end-point para retornar um DTO personalizado, agrupamento de várias informações em diferentes tabelas da sua base de dados;
+	
+## Desafios Anteriores ✔
+- [Desafio 1](https://github.com/ederntt/becaDesafiosEderRibeiro/edit/main/README.md)
+- [Desafio 2](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/novodesafio)
+- [Desafio 3](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/Desafio3_)
+- [Desafio 4](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/Desafio4)
 
 ## Tecnologias e ferramentas Utilizadas
 - [java](https://www.java.com/pt-BR/)
@@ -30,14 +36,6 @@ Aplique os conceitos de DTO na sua aplicação;
 - JSON. (Sem link de acesso)
 - Swagger. (Sem link de acesso)
 	
-## DESAFIOS
-- [Desafio 1](https://github.com/ederntt/becaDesafiosEderRibeiro/edit/main/README.md)
-- [Desafio 2](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/novodesafio)
-- [Desafio 3](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/Desafio3_)
-- [Desafio 4](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/Desafio4)
-	
-
-
 
 ## Baixando o projeto
 
