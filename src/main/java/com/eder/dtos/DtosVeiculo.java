@@ -1,6 +1,7 @@
 package com.eder.dtos;
 
 import com.eder.modulos.Veiculo;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,7 +11,8 @@ import javax.validation.constraints.Size;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class DtosVeiculo extends Veiculo {
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class DtosVeiculo{
 
     private String modelo;
     @Size (min = 7, message = "A placa deve conter no minimo 7 caracteres")

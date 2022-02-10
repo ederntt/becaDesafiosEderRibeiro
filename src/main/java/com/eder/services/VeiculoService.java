@@ -43,15 +43,16 @@ public class VeiculoService implements InterfaceVeiculo {
     }
 
     @Override
-    public Veiculo atualizar(Veiculo veiculo, Long id) {
+    public Veiculo atualizar(DtosVeiculo dtosVeiculo,Long id){
         Veiculo modificar = this.obter(id);
-        modificar.setCpf(veiculo.getCpf());
-        modificar.setModelo(veiculo.getModelo());
-        modificar.setPlacaCarro(veiculo.getPlacaCarro());
-        modificar.setNomeMotorista(veiculo.getNomeMotorista());
-        modificar.setHoraEntrada(veiculo.getHoraEntrada());
-        modificar.setHoraSaida(veiculo.getHoraSaida());
-        modificar.setPagamento(veiculo.getPagamento());
+//        modificar.setCpf(veiculo.getCpf());
+//        modificar.setModelo(veiculo.getModelo());
+//        modificar.setPlacaCarro(veiculo.getPlacaCarro());
+//        modificar.setNomeMotorista(veiculo.getNomeMotorista());
+//        modificar.setHoraEntrada(veiculo.getHoraEntrada());
+//        modificar.setHoraSaida(veiculo.getHoraSaida());
+//        modificar.setPagamento(veiculo.getPagamento());
+        mapperVeiculo.atualizar(modificar,dtosVeiculo);
         repositoryVeiculo.save(modificar);
 
         return modificar;

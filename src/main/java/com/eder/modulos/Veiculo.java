@@ -1,16 +1,16 @@
 package com.eder.modulos;
 
-import com.eder.dtos.DtosVeiculo;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.validator.constraints.br.CPF;
 
 import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Veiculo  {
 
     @Id

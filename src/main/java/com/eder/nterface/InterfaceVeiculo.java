@@ -7,17 +7,17 @@ import java.util.List;
 
 public interface InterfaceVeiculo {
 
-    DtosVeiculo criar(DtosVeiculo dtosVeiculo);
+    Veiculo criar(DtosVeiculo dtosVeiculo);
 
-    public Veiculo criar(Veiculo veiculo);
+//    public Veiculo criar(Veiculo veiculo);
 
-    public Veiculo atualizar(Veiculo veiculo, Long id);
+    Veiculo atualizar(DtosVeiculo veiculo, Long id);
 
-    public void deletar(Long id);
+    void deletar(Long id);
 
     Veiculo obter(Long id);
 
-    public List<Veiculo> listar();
+    List<Veiculo> listar();
 
 
 }

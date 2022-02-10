@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -26,7 +27,7 @@ public class ControlerVeiculo extends DtosVeiculo {
     }
 
     @PatchMapping("/{id}")
-    public ResponseEntity<Veiculo> atualizar(@RequestBody DtosVeiculo dtosveiculo, @PathVariable Long id) {
+    public ResponseEntity<Veiculo> atualizar(@RequestBody @Valid DtosVeiculo dtosveiculo, @PathVariable Long id) {
          Veiculo veiculo1 = veiculoService.atualizar(dtosveiculo, id);
 
         return ResponseEntity.ok().body(veiculo1);
