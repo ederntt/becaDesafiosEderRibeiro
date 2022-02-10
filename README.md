@@ -7,7 +7,7 @@
 
 
 ## Curso ✍
-- https://nttdatalearn.udemy.com/course/fundamentos-de-programacao-com-java/learn/lecture/5740792#overview
+-[Curso de Java- Udemy](https://nttdatalearn.udemy.com/course/fundamentos-de-programacao-com-java/learn/lecture/5740792#overview)
 	
 ## Desafio 5 requeria: 🤖
 -Aplique os conceitos de DTO na sua aplicação;
