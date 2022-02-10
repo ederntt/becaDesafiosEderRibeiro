@@ -13,7 +13,7 @@ Desafio 2 (Pagina Atual)
 - https://nttdatalearn.udemy.com/course/fundamentos-de-programacao-com-java/learn/lecture/5740792#overview
 
 
-## desafio 2 Requeria: 🤖
+## Desafio 2 Requeria: 🤖
 Crie as classes de controllers na sua API (CRUD);
 Implementar o OpenAPI na sua Spring Rest API;
 Implementar ResponseEntity nos retornos das suas chamadas.
