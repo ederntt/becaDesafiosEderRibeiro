@@ -8,8 +8,8 @@
 
 Desafio 2 (Pagina Atual)
 
-## Curso ✍
-- https://nttdatalearn.udemy.com/course/fundamentos-de-programacao-com-java/learn/lecture/5740792#overview
+## Curso Utilizado para o projeto ✍
+-[Curso de Java- Udemy](https://nttdatalearn.udemy.com/course/fundamentos-de-programacao-com-java/learn/lecture/5740792#overview)
 
 
 ## Desafio 2 Requeria: 🤖
