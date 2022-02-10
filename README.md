@@ -13,9 +13,9 @@ Desafio 2 (Pagina Atual)
 
 
 ## Desafio 2 Requeria: 🤖
-Crie as classes de controllers na sua API (CRUD);
-Implementar o OpenAPI na sua Spring Rest API;
-Implementar ResponseEntity nos retornos das suas chamadas.
+- Crie as classes de controllers na sua API (CRUD);
+- Implementar o OpenAPI na sua Spring Rest API;
+- Implementar ResponseEntity nos retornos das suas chamadas.
 
 
 ## Tecnologias e ferramentas Utilizadas ⚙
