@@ -7,7 +7,7 @@
 
 
 <h1 align= "center"> 
-![MicrosoftTeams-image](https://user-images.githubusercontent.com/98030629/153655089-4fb557f3-71a6-4e15-a18e-c0770c0a24ad.png)
+<img width="254" alt="parkingg" src="https://user-images.githubusercontent.com/98030629/153666864-b3534da5-3ba9-4264-88a1-44c8644f8bde.png">
 </h1> 
 
 ## Projeto simples de estacionamento, tendo como classes principais o Estacionamento e o Veiculo.
