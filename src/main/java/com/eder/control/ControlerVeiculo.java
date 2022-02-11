@@ -1,12 +1,12 @@
 package com.eder.control;
 
-import com.eder.dtos.DtosVeiculo;
 import com.eder.modulos.Veiculo;
 import com.eder.services.VeiculoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -31,14 +31,14 @@ public class ControlerVeiculo {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> deletar(@PathVariable Long id) {
+    public ResponseEntity<String> deletar(@PathVariable @Valid Long id) {
         veiculoService.deletar(id);
 
         return ResponseEntity.noContent().build();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<DtosVeiculo> obter(@PathVariable Long id) {
+    public ResponseEntity<Veiculo> obter(@PathVariable Long id) {
         Veiculo veiculo1 = veiculoService.obter(id);
 
         return ResponseEntity.ok(veiculo1);

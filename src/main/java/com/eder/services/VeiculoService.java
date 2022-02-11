@@ -24,6 +24,9 @@ public class VeiculoService implements InterfaceVeiculo {
 
         Veiculo veiculoCriado = new Veiculo();
         veiculoCriado.setPlacaCarro(veiculo.getPlacaCarro());
+        if (veiculoCriado.getPlacaCarro().length()<=6){
+            throw  new TratamentoErros("placa do carro nao pode ter menos de 7 digitos");
+        }
         veiculoCriado.setModelo(veiculo.getModelo());
         veiculoCriado.setHoraEntrada(veiculo.getHoraEntrada());
         veiculoCriado.setHoraSaida(veiculo.getHoraSaida());

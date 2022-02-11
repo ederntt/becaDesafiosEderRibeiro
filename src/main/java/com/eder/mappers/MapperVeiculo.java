@@ -13,4 +13,8 @@ public interface MapperVeiculo {
         DtosVeiculo veiculoToDtoVeiculo (Veiculo veiculo);
 
         Veiculo veiculoToDtoVeiculo (DtosVeiculo dtosVeiculo);
+
+    default void atualizar(Veiculo veiculo, DtosVeiculo dto) {
+
     }
+}

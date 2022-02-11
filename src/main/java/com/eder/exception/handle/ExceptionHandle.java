@@ -5,6 +5,7 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
+import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -19,6 +20,14 @@ public class ExceptionHandle {
     public ResponseEntity<Padrao> Erro(TratamentoErros t) {
         Padrao padrao = new Padrao();
         padrao.setMensagem(t.getMessage());
+        padrao.setCodigo(HttpStatus.NOT_ACCEPTABLE.value());
+
+        return ResponseEntity.status(padrao.getCodigo()).body(padrao);
+    } //HttpRequestMethodNotSupportedException
+    @ExceptionHandler(HttpRequestMethodNotSupportedException.class)
+    public ResponseEntity<Padrao> Erro(HttpRequestMethodNotSupportedException t) {
+        Padrao padrao = new Padrao();
+        padrao.setMensagem("Não sera possivel deletar estacionamento sem id");
         padrao.setCodigo(HttpStatus.NOT_ACCEPTABLE.value());
 
         return ResponseEntity.status(padrao.getCodigo()).body(padrao);

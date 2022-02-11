@@ -13,7 +13,6 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ControlerEstacionamento {
 
-
     private final EstacionamentoServices estacionamentoServices;
 
     @PostMapping
