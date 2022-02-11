@@ -1,7 +1,7 @@
 
 
 <h1 align= "center"> 
-![parking](https://user-images.githubusercontent.com/98030629/153666665-1dd7ea59-061d-4363-a102-446f65a4fdee.png)
+<img width="254" alt="parkingg" src="https://user-images.githubusercontent.com/98030629/153666864-b3534da5-3ba9-4264-88a1-44c8644f8bde.png">
 </h1> 
 
 ---
