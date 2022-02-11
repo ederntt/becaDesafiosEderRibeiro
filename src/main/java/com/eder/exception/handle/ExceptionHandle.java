@@ -59,5 +59,4 @@ public class ExceptionHandle {
 
         return ResponseEntity.status(padrao.getCodigo()).body(padrao);
     }
-
 }
