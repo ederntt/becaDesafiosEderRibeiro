@@ -18,7 +18,7 @@
 - [Desafio 3](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/Desafio3_)
 - [Desafio 4](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/Desafio4)
 - [Desafio 5](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/Desafio5)
-- [Desafio 6](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/Desafio6)
+- [Desafio 6](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/desafio6)
 
 ## Tecnologias e ferramentas Utilizadas ⚙
 - [java](https://www.java.com/pt-BR/)
