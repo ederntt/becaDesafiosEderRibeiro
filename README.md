@@ -1,6 +1,6 @@
 
 ## Projeto Beca Java (NTT Data)🎓
-## Mentor: [Flavius Gama Ferreira]([Flavius Gama](https://www.linkedin.com/in/flavius-gama-748774a1/) 👨‍🏫.
+## Mentor: [Flavius Gama Ferreira](https://www.linkedin.com/in/flavius-gama-748774a1/) 👨‍🏫.
 ## Lider: [Debora Alvez Rossignoli](https://www.linkedin.com/in/deborahrossignoli/) 👱‍♀️.
 
 
