@@ -37,11 +37,8 @@ Adicionar validações de dados na API, adicionar Mapper na aplicação para a c
 - [Desafio 7](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/desafio7)
 Fazer o tratamento das exception utilizando try catch , fazer o tratamento utilizando throw e @ExceptionHandler, aproveitar o método criado com @ExceptionHandler e criar a própria classe para tratamento de exceptions utilizando @ControllerAdvice.
 
-- [Desafio 8]()
-- Criar um docker-compose.yml.
-- subir um container contendo uma base de dados.
-- integrar sua Api com a base de dados.
-- fazer os testes de integração com a nova base de dados.
+- [Desafio 8](https://github.com/ederntt/becaDesafiosEderRibeiro/tree/desafio8)
+Criar um docker-compose.yml, subir um container contendo uma base de dados, integrar sua Api com a base de dados, fazer os testes de integração com a nova base de dados.
  
  ´´´
  ## Considerações Finais.✨
