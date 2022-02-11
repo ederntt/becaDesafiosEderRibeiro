@@ -1,14 +1,14 @@
 
+<h1 align= "center"> 
+<img width="254" alt="parkingg" src="https://user-images.githubusercontent.com/98030629/153666864-b3534da5-3ba9-4264-88a1-44c8644f8bde.png">
+</h1> 
+
+
 ## Projeto Beca Java (NTT Data)🎓
 ## Mentor: [Flavius Gama Ferreira](https://www.linkedin.com/in/flavius-gama-748774a1/) 👨‍🏫.
 ## Lider: [Debora Alvez Rossignoli](https://www.linkedin.com/in/deborahrossignoli/) 👱‍♀️.
 
 
-
-
-<h1 align= "center"> 
-<img width="254" alt="parkingg" src="https://user-images.githubusercontent.com/98030629/153666864-b3534da5-3ba9-4264-88a1-44c8644f8bde.png">
-</h1> 
 
 ## Projeto simples de estacionamento, tendo como classes principais o Estacionamento e o Veiculo.
 
