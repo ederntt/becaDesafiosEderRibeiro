@@ -49,7 +49,7 @@ Fazer o tratamento das exception utilizando try catch , fazer o tratamento utili
 - [Draw.io - Aplicar UML](https://drawio.bbva.com/)
 - [Intelij - Desenvolvimento Java.](https://www.jetbrains.com/pt-br/idea/) 
 - [Postman - Simulação de Interface](https://www.postman.com/)
--[Docker](https://docs.docker.com/get-docker/)
+- [Docker](https://docs.docker.com/get-docker/)
  
 - H2 - Banco de Dados. Console
 - Spring Boot. (Sem link de acesso)
