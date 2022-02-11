@@ -1,7 +1,7 @@
 
 ## Projeto Beca Java (NTT Data)🎓
-## Mentor: Flavius Gama Ferreira 👨‍🏫
-## Lider: Debora Alvez Rossignoli 👱‍♀️
+## Mentor: [Flavius Gama Ferreira]([Flavius Gama](https://www.linkedin.com/in/flavius-gama-748774a1/) 👨‍🏫
+## Lider: [Debora Alvez Rossignoli](https://www.linkedin.com/in/deborahrossignoli/) 👱‍♀️
 
 
 
@@ -38,7 +38,14 @@ Adicionar validações de dados na API, adicionar Mapper na aplicação para a c
 Fazer o tratamento das exception utilizando try catch , fazer o tratamento utilizando throw e @ExceptionHandler, aproveitar o método criado com @ExceptionHandler e criar a própria classe para tratamento de exceptions utilizando @ControllerAdvice.
 
 - [Desafio 8]()
- Criar um docker-compose.yml, subir um container contendo uma base de dados, integrar sua Api com a base de dados, fazer os testes de integração com a nova base de dados;
+- Criar um docker-compose.yml.
+- subir um container contendo uma base de dados.
+- integrar sua Api com a base de dados.
+- fazer os testes de integração com a nova base de dados.
+ 
+ ´´´
+ ## Considerações Finais.✨
+ * ideia do projeto foi criado pelo mentor [Flavius Gama](https://www.linkedin.com/in/flavius-gama-748774a1/), agradeço o tempo, a paciência e a dedicação em sempre estar pronto para nos ajudar, alguns desafios foram realmente de tirar o folego, nos tirar da nossa zona de conforto  e assim aprendi que para todo projeto existe uma solução e para que possamos achar a solução precisamos errar, pois como diz o ditado "é errando que se aprende" e para um progamador nao é diferente..Desejo muito sucesso e muitas conquistas ao meu mentor e aos meus colegas que de alguma forma me ajudaram. ✨
 
 ´´´
 
