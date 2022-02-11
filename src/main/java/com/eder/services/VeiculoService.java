@@ -1,72 +1,78 @@
 package com.eder.services;
 
-import com.eder.Interface.InterfaceVeiculo;
-import com.eder.Modulos.Estac;
-import com.eder.Modulos.Veiculo;
+import com.eder.dtos.DtosVeiculo;
+import com.eder.exception.TratamentoErros;
+import com.eder.modulos.Veiculo;
+import com.eder.nterface.InterfaceVeiculo;
+import com.eder.repository.RepositoryVeiculo;
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.TransactionalException;
 import java.util.List;
 
+@Data
 @Service
+@RequiredArgsConstructor
 public class VeiculoService implements InterfaceVeiculo {
 
-    private VeiculoService veiculoService;
+    private final RepositoryVeiculo repositoryVeiculo;
 
+    @Override
     public Veiculo criar(Veiculo veiculo) {
 
-        System.out.println(veiculo);
-      if (veiculo.getNomeMotorista().length()< 3) {
-           throw new RuntimeException("Nome do motorista noa pode ser menor que 3 caracteres");
+        Veiculo veiculoCriado = new Veiculo();
+        veiculoCriado.setPlacaCarro(veiculo.getPlacaCarro());
+        if (veiculoCriado.getPlacaCarro().length()<=6){
+            throw  new TratamentoErros("placa do carro nao pode ter menos de 7 digitos");
         }
-         veiculo.setId(2L);
-      return veiculo;
+        veiculoCriado.setModelo(veiculo.getModelo());
+        veiculoCriado.setHoraEntrada(veiculo.getHoraEntrada());
+        veiculoCriado.setHoraSaida(veiculo.getHoraSaida());
+        veiculoCriado.setPagamento(veiculo.getPagamento());
+
+        Veiculo veiculoCriado1 = repositoryVeiculo.save(veiculo);
+
+        return veiculoCriado1;
     }
 
+    @Override
     public Veiculo atualizar(Veiculo veiculo, Long id) {
 
-       Veiculo veiculoAtualizar = veiculoService.atualizar(veiculo, 4L);
-        return veiculo;
+        Veiculo modificar = this.obter(id);
+        modificar.setCpf(veiculo.getCpf());
+        modificar.setModelo(veiculo.getModelo());
+        modificar.setPlacaCarro(veiculo.getPlacaCarro());
+        modificar.setNomeMotorista(veiculo.getNomeMotorista());
+        modificar.setHoraEntrada(veiculo.getHoraEntrada());
+        modificar.setHoraSaida(veiculo.getHoraSaida());
+        modificar.setPagamento(veiculo.getPagamento());
+
+        repositoryVeiculo.save(modificar);
+        return modificar;
     }
 
     public void deletar(Long id) {
-        //
+        repositoryVeiculo.deleteById(id);
+
     }
 
     public Veiculo obter(Long id) {
-        Veiculo veiculo = new Veiculo("Alberto","12345678-90","avb123",
-                "14:20", "15:10","Débito");
 
-        Veiculo veiculo1= new Veiculo( "Roberto", "0652347233-06", "acd3456",
-                "13:45", "16:43", "Credito");
-
-        Veiculo veiculo2= new Veiculo( "Camila", "1234667788-08", "tyu7654",
-                "21:45", "07:43", "Debito");
-
-        return veiculo;
+        try {
+          return repositoryVeiculo.findById(id).get();
+        } catch (java.util.NoSuchElementException nome) {
+            throw new TratamentoErros(nome.getMessage());
+        }
     }
 
-    public List<Veiculo> listar() {
-        Estac est1 = new Estac();
-        est1.setNome(String.valueOf(1L));
-        est1.setNome("Caio");
+    public List<Veiculo> listar() {   // verificar com flavius
+        List<Veiculo> listarVeiculo = repositoryVeiculo.findAll();
 
-        Estac est2 = new Estac();
-        est2.setNome(String.valueOf(2L));
-        est2.setNome("Miranda");
-
-
-        Veiculo veiculo = new Veiculo("Alberto","12345678-90","avb123",
-                "14:20", "15:10","Débito");
-
-        Veiculo veiculo1= new Veiculo( "Roberto", "0652347233-06", "acd3456",
-                "13:45", "16:43", "Credito");
-
-        Veiculo veiculo2= new Veiculo( "Camila", "1234667788-08", "tyu7654",
-                "21:45", "07:43", "Debito");
-
-        return List.of(veiculo,
-              veiculo1,
-                veiculo2
-           );
+        if (listarVeiculo == null) {
+            throw new TratamentoErros("Lista indisponivel");
+        }
+        return listarVeiculo;
     }
 }
