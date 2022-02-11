@@ -23,8 +23,6 @@ public class VeiculoService implements InterfaceVeiculo {
     @Override
     public DtosVeiculo criar(DtosVeiculo dtosVeiculo) {
 
-   // return repositoryVeiculo.save(mapperVeiculo.veiculoToDtoVeiculo(dtosVeiculo));
-
         Veiculo veiculoCriado = new Veiculo();
         veiculoCriado.setPlacaCarro(dtosVeiculo.getPlacaCarro());
         if (veiculoCriado.getPlacaCarro().length()<7){
@@ -38,23 +36,13 @@ public class VeiculoService implements InterfaceVeiculo {
         veiculoCriado.setHoraSaida(dtosVeiculo.getHoraSaida());
         veiculoCriado.setPagamento(dtosVeiculo.getPagamento());
 
-
         return repositoryVeiculo.save(mapperVeiculo.veiculoToDtoVeiculo(dtosVeiculo));
-       // Veiculo veiculoCriado1 = repositoryVeiculo.save(dtosVeiculo);
-
-       // return veiculoCriado1;
    }
 
     @Override
     public Veiculo atualizar(DtosVeiculo dtosVeiculo,Long id){
         Veiculo modificar = this.obter(id);
-//
-//        modificar.setModelo(dtosVeiculo.getModelo());
-//        modificar.setPlacaCarro(dtosVeiculo.getPlacaCarro());
-//        modificar.setHoraEntrada(dtosVeiculo.getHoraEntrada());
-//        modificar.setHoraSaida(dtosVeiculo.getHoraSaida());
-//        modificar.setPagamento(dtosVeiculo.getPagamento());
-//        mapperVeiculo.atualizar(modificar,dtosVeiculo);
+
         repositoryVeiculo.save(modificar);
         return modificar;
     }
@@ -73,7 +61,7 @@ public class VeiculoService implements InterfaceVeiculo {
         }
     }
 
-    public List<Veiculo> listar() {   // verificar com flavius
+    public List<Veiculo> listar() {
         List<Veiculo> listarVeiculo = repositoryVeiculo.findAll();
 
         if (listarVeiculo == null) {

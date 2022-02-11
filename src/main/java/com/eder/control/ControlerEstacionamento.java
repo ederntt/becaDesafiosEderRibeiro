@@ -50,6 +50,4 @@ public class ControlerEstacionamento {
         return ResponseEntity.ok(listar);
 
     }
-
-
 }

@@ -30,7 +30,6 @@ public class ControlerVeiculo extends DtosVeiculo {
 
         return ResponseEntity.ok().body(veiculo1);
 
-
     }
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deletar(@PathVariable Long id) {

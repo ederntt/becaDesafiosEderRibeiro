@@ -23,7 +23,7 @@ public class ExceptionHandle {
         padrao.setCodigo(HttpStatus.NOT_ACCEPTABLE.value());
 
         return ResponseEntity.status(padrao.getCodigo()).body(padrao);
-    } //HttpRequestMethodNotSupportedException
+    }
     @ExceptionHandler(HttpRequestMethodNotSupportedException.class)
     public ResponseEntity<Padrao> Erro(HttpRequestMethodNotSupportedException t) {
         Padrao padrao = new Padrao();
