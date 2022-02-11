@@ -1,5 +1,6 @@
 package com.eder.modulos;
 
+import com.eder.dtos.DtosVeiculo;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,7 +11,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Veiculo  {
+public class Veiculo extends DtosVeiculo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -2,6 +2,7 @@ package com.eder.services;
 
 import com.eder.dtos.DtosVeiculo;
 import com.eder.exception.TratamentoErros;
+import com.eder.mappers.MapperVeiculo;
 import com.eder.modulos.Veiculo;
 import com.eder.nterface.InterfaceVeiculo;
 import com.eder.repository.RepositoryVeiculo;
@@ -9,7 +10,6 @@ import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import javax.transaction.TransactionalException;
 import java.util.List;
 
 @Data
@@ -18,37 +18,43 @@ import java.util.List;
 public class VeiculoService implements InterfaceVeiculo {
 
     private final RepositoryVeiculo repositoryVeiculo;
+    private final MapperVeiculo mapperVeiculo;
 
     @Override
-    public Veiculo criar(Veiculo veiculo) {
+    public DtosVeiculo criar(DtosVeiculo dtosVeiculo) {
+
+   // return repositoryVeiculo.save(mapperVeiculo.veiculoToDtoVeiculo(dtosVeiculo));
 
         Veiculo veiculoCriado = new Veiculo();
-        veiculoCriado.setPlacaCarro(veiculo.getPlacaCarro());
-        if (veiculoCriado.getPlacaCarro().length()<=6){
+        veiculoCriado.setPlacaCarro(dtosVeiculo.getPlacaCarro());
+        if (veiculoCriado.getPlacaCarro().length()<7){
             throw  new TratamentoErros("placa do carro nao pode ter menos de 7 digitos");
         }
-        veiculoCriado.setModelo(veiculo.getModelo());
-        veiculoCriado.setHoraEntrada(veiculo.getHoraEntrada());
-        veiculoCriado.setHoraSaida(veiculo.getHoraSaida());
-        veiculoCriado.setPagamento(veiculo.getPagamento());
+        if (veiculoCriado.getPlacaCarro().length()>7){
+            throw  new TratamentoErros("placa do carro nao pode ter mais de 7 digitos");
+        }
+        veiculoCriado.setModelo(dtosVeiculo.getModelo());
+        veiculoCriado.setHoraEntrada(dtosVeiculo.getHoraEntrada());
+        veiculoCriado.setHoraSaida(dtosVeiculo.getHoraSaida());
+        veiculoCriado.setPagamento(dtosVeiculo.getPagamento());
 
-        Veiculo veiculoCriado1 = repositoryVeiculo.save(veiculo);
 
-        return veiculoCriado1;
-    }
+        return repositoryVeiculo.save(mapperVeiculo.veiculoToDtoVeiculo(dtosVeiculo));
+       // Veiculo veiculoCriado1 = repositoryVeiculo.save(dtosVeiculo);
+
+       // return veiculoCriado1;
+   }
 
     @Override
-    public Veiculo atualizar(Veiculo veiculo, Long id) {
-
+    public Veiculo atualizar(DtosVeiculo dtosVeiculo,Long id){
         Veiculo modificar = this.obter(id);
-        modificar.setCpf(veiculo.getCpf());
-        modificar.setModelo(veiculo.getModelo());
-        modificar.setPlacaCarro(veiculo.getPlacaCarro());
-        modificar.setNomeMotorista(veiculo.getNomeMotorista());
-        modificar.setHoraEntrada(veiculo.getHoraEntrada());
-        modificar.setHoraSaida(veiculo.getHoraSaida());
-        modificar.setPagamento(veiculo.getPagamento());
-
+//
+//        modificar.setModelo(dtosVeiculo.getModelo());
+//        modificar.setPlacaCarro(dtosVeiculo.getPlacaCarro());
+//        modificar.setHoraEntrada(dtosVeiculo.getHoraEntrada());
+//        modificar.setHoraSaida(dtosVeiculo.getHoraSaida());
+//        modificar.setPagamento(dtosVeiculo.getPagamento());
+//        mapperVeiculo.atualizar(modificar,dtosVeiculo);
         repositoryVeiculo.save(modificar);
         return modificar;
     }
